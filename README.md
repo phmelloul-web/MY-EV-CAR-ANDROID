@@ -1,18 +1,11 @@
-# MY EV CAR — Android V37
+# MY EV CAR Android V38 — site intégré
 
-Application Android officielle **MY EV CAR**, compilée à partir du code source avec Android Gradle Plugin 8.6.1, Gradle 8.10.2 et Android SDK 35.
+Application Android MY EV CAR. La V38 embarque exactement le site statique V36 (HTML, JavaScript et fichiers images locaux) à l'intérieur de l'APK. Le site local est servi par WebView via l'origine HTTPS interne appassets.androidplatform.net. Aucun serveur n'est nécessaire pour l'accueil, les fiches véhicules et les articles intégrés.
 
-Ce projet remplace les anciennes versions expérimentales qui se fermaient à l'ouverture.
+Les liens et images hébergés par des sites tiers nécessitent toujours Internet. Le bouton WhatsApp reste configurable en modifiant whatsapp-config.js dans l'archive source, puis en reconstruisant l'APK.
 
-## Téléchargement de l'APK
-Dans GitHub, aller dans **Actions** → **Compiler MY EV CAR Android** → sélectionner l'exécution verte → télécharger **MY_EV_CAR_ANDROID_V37_APK** dans *Artifacts*. Extraire le ZIP puis installer `app-debug.apk` sur le téléphone.
+## Compilation
+GitHub Actions > Compiler MY EV CAR Android > Run workflow. L'artefact MY_EV_CAR_ANDROID_V38_COMPLET contient l'APK de test signé automatiquement par Gradle. Si le téléphone a une ancienne application signée avec une autre clé, la désinstaller d'abord.
 
-Le dépôt GitHub est privé. L'APK est signé avec la clé de développement automatique GitHub Actions (une signature différente peut empêcher de mettre à jour une version précédente : dans ce cas, désinstaller l'ancienne application avant d'installer la nouvelle).
-
-## Contenu de l'application
-WebView affichant le site existant :
-https://broad-moon-14ca.phmelloul.workers.dev/
-
-**Connexion Internet obligatoire** : cette application charge le site déployé sur Cloudflare ; elle n'embarque pas les images dans l'APK. Pour voir les 3 articles et le bouton WhatsApp, la V36 doit être effectivement déployée sur cette adresse.
-
-Ne pas soumettre un APK de debug directement sur Google Play.
+## Intégrité
+L'archive du site V36 originale (11 894 821 octets) a été séparée en 23 morceaux binaires dans site_package. GitHub Actions les réassemble, vérifie SHA-256, puis les extrait dans app/src/main/assets/site avant de compiler. Cela garantit l'absence de perte ou de substitution de photos.
