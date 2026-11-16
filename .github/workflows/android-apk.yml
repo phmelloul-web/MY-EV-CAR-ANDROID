@@ -9,49 +9,37 @@ jobs:
   apk:
     runs-on: ubuntu-latest
     steps:
-      - name: Récupérer le projet
+      - name: Recuperer le projet
         uses: actions/checkout@v4
       - name: Installer Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-      - name: Vérifier le SDK Android
+      - name: Installer le SDK Android
         run: |
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install 'platforms;android-35' 'build-tools;35.0.0'
       - name: Installer Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
-      - name: Reconstituer intégralement le site V36
-        shell: bash
+      - name: Verifier l'adresse du site
         run: |
-          set -euo pipefail
-          mkdir -p build app/src/main/assets/site
-          cat site_package/site_v36.part* > build/site-v36.zip
-          echo 'f7a5146c647f7060f4c9e316d03cfe5a3b5beb235e1a00c5c6f2bcfe252fe5bb  build/site-v36.zip' | sha256sum -c -
-          unzip -tq build/site-v36.zip
-          unzip -oq build/site-v36.zip -d app/src/main/assets/site/
-          test -s app/src/main/assets/site/index.html
-          test -s app/src/main/assets/site/whatsapp-config.js
-          test -s app/src/main/assets/site/images/alumi-article-1-photo-reelle.webp
-          test -s app/src/main/assets/site/images/alumi-article-3-securite-photo-reelle.webp
-          echo "Fichiers embarqués : $(find app/src/main/assets/site -type f | wc -l)"
-      - name: Compiler l'APK avec Android Gradle Plugin
+          grep -Fq 'https://broad-moon-14ca.phmelloul.workers.dev/' app/src/main/java/com/myevcar/mobile/MainActivity.java
+      - name: Compiler l'APK de test
         run: gradle --no-daemon assembleDebug
-      - name: Vérifier que les fichiers du site sont dans l'APK
-        shell: bash
+      - name: Verifier l'APK
         run: |
           set -euo pipefail
           APK=app/build/outputs/apk/debug/app-debug.apk
+          test -s "$APK"
           unzip -tq "$APK"
-          unzip -l "$APK" | grep -Fq 'assets/site/index.html'
-          unzip -l "$APK" | grep -Fq 'assets/site/whatsapp-config.js'
-          unzip -l "$APK" | grep -Fq 'assets/site/images/alumi-article-1-photo-reelle.webp'
+          unzip -l "$APK" | grep -F 'classes.dex'
           ls -lh "$APK"
-      - name: Déposer le nouvel APK V38
+      - name: Fournir l'APK Android V41
         uses: actions/upload-artifact@v4
         with:
-          name: MY_EV_CAR_ANDROID_V38_COMPLET
+          name: MY_EV_CAR_ANDROID_V41_SITE_LIVE
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+          retention-days: 30
