@@ -33,51 +33,12 @@ jobs:
           curl -fLSs --retry 3 --max-time 60 --connect-timeout 15 "$ROOT/" -o "$TARGET/index.html"
           curl -fLSs --retry 3 --max-time 60 --connect-timeout 15 "$ROOT/whatsapp-config.js" -o "$TARGET/whatsapp-config.js"
           grep -Fq "bandeau-comparatif-100km-v40.png" "$TARGET/index.html"
-          cat > /tmp/photos_v40.txt <<'PHOTOS'
-al7-interieur-officiel-rond-1.png
-al7-interieur-officiel-rond-2.png
-alumi-article-1-antilles.png
-alumi-article-1-photo-reelle.webp
-alumi-article-2-antilles.png
-alumi-article-3-securite-photo-reelle.webp
-alumi-jeunes-mobilite-originale.png
-alumi-jeunes-mobilite-originale.webp
-astra-01-jaune.webp
-astra-02-gris.webp
-astra-04-jaune-studio.webp
-astra-06-gris-arriere.webp
-astra-08-interieur.webp
-astra-09-tableau.webp
-l6-photo-3-180km-3-3kw.webp
-l6-photo-4-bluetooth-vocal.jpg
-l6-photo-5-portes-ouvertes.jpg
-l6-photo-6-14plus.jpg
-l6-photo-7-gris-orange.jpg
-linktour-alumi-blanche-detouree.png
-linktour-elite-coffre-nettoye.png
-new1.jpeg
-new2.jpeg
-new6.jpeg
-new7.jpeg
-bandeau-comparatif-100km-v40.png
-PHOTOS
-          while IFS= read -r photo; do
-            test -n "$photo" || continue
-            curl -fLSs --retry 3 --max-time 90 --connect-timeout 15 \
-              "$ROOT/images/$photo" -o "$TARGET/images/$photo"
+          PHOTO_LIST="al7-interieur-officiel-rond-1.png al7-interieur-officiel-rond-2.png alumi-article-1-antilles.png alumi-article-1-photo-reelle.webp alumi-article-2-antilles.png alumi-article-3-securite-photo-reelle.webp alumi-jeunes-mobilite-originale.png alumi-jeunes-mobilite-originale.webp astra-01-jaune.webp astra-02-gris.webp astra-04-jaune-studio.webp astra-06-gris-arriere.webp astra-08-interieur.webp astra-09-tableau.webp l6-photo-3-180km-3-3kw.webp l6-photo-4-bluetooth-vocal.jpg l6-photo-5-portes-ouvertes.jpg l6-photo-6-14plus.jpg l6-photo-7-gris-orange.jpg linktour-alumi-blanche-detouree.png linktour-elite-coffre-nettoye.png new1.jpeg new2.jpeg new6.jpeg new7.jpeg bandeau-comparatif-100km-v40.png"
+          for photo in $PHOTO_LIST; do
+            curl -fLSs --retry 3 --max-time 90 --connect-timeout 15 "$ROOT/images/$photo" -o "$TARGET/images/$photo"
             test -s "$TARGET/images/$photo"
-          done < /tmp/photos_v40.txt
-          python3 - <<'PY'
-          import os, pathlib
-          root=pathlib.Path('app/src/main/assets/site')
-          files=[f for f in root.rglob('*') if f.is_file()]
-          total=sum(f.stat().st_size for f in files)
-          print('Fichiers integres:',len(files),'Octets:',total)
-          assert len(files)>=27, 'Photos incompletes'
-          assert total>10_000_000, 'Contenu trop petit: site incomplet'
-          assert (root/'images/bandeau-comparatif-100km-v40.png').stat().st_size>400000
-          assert 'bandeau-comparatif-100km-v40.png' in (root/'index.html').read_text()
-          PY
+          done
+          python3 -c 'from pathlib import Path; r=Path("app/src/main/assets/site"); fs=[p for p in r.rglob("*") if p.is_file()]; n=sum(p.stat().st_size for p in fs); print("Fichiers:",len(fs),"Octets:",n); assert len(fs)>=27; assert n>10000000; assert (r/"images/bandeau-comparatif-100km-v40.png").stat().st_size>400000'
       - name: Compiler APK Android
         run: gradle --no-daemon assembleDebug
       - name: Verifier le contenu complet et la signature
@@ -88,7 +49,7 @@ PHOTOS
           test -s "$APK"
           unzip -tq "$APK"
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" > apk-info.txt
-          cat apk-info.txt | grep -E "^(package:|application-label:)"
+          grep -E "^(package:|application-label:)" apk-info.txt
           grep -Fq "package: name='com.myevcar.v1.complete'" apk-info.txt
           grep -Fq "application-label:'myevcarv1'" apk-info.txt
           unzip -l "$APK" | grep -F "assets/site/index.html"
