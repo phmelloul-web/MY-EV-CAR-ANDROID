@@ -19,7 +19,6 @@ public class MainActivity extends Activity {
     private static final String WEBSITE_URL = "https://broad-moon-14ca.phmelloul.workers.dev/";
     private static final String WEBSITE_HOST = "broad-moon-14ca.phmelloul.workers.dev";
     private static final int REQUEST_FILE_CHOOSER = 1001;
-
     private WebView webView;
     private ValueCallback<Uri[]> pendingFileChooser;
 
@@ -36,7 +35,9 @@ public class MainActivity extends Activity {
         settings.setAllowFileAccess(false);
         settings.setAllowContentAccess(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
-        settings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        // Version de test: forcer le chargement actuel et eviter une ancienne copie locale.
+        settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+        webView.clearCache(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             settings.setSafeBrowsingEnabled(true);
         }
@@ -50,6 +51,15 @@ public class MainActivity extends Activity {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 return routeNavigation(Uri.parse(url));
             }
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request,
+                                        android.webkit.WebResourceError error) {
+                if (request.isForMainFrame()) {
+                    Toast.makeText(MainActivity.this,
+                            "myevcarv1 : connexion au site impossible. Verifiez Internet.",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
         });
 
         webView.setWebChromeClient(new WebChromeClient() {
@@ -61,13 +71,11 @@ public class MainActivity extends Activity {
                     @Override
                     public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                         openExternal(request.getUrl());
-                        view.post(view::destroy);
                         return true;
                     }
                     @Override
                     public boolean shouldOverrideUrlLoading(WebView view, String url) {
                         openExternal(Uri.parse(url));
-                        view.post(view::destroy);
                         return true;
                     }
                 });
@@ -95,9 +103,12 @@ public class MainActivity extends Activity {
         webView.setDownloadListener((url, userAgent, contentDisposition, mimeType, length) ->
                 openExternal(Uri.parse(url)));
         setContentView(webView);
-
-        if (savedInstanceState == null) webView.loadUrl(WEBSITE_URL);
-        else webView.restoreState(savedInstanceState);
+        if (savedInstanceState == null) {
+            Toast.makeText(this, "myevcarv1 : ouverture du site en direct", Toast.LENGTH_SHORT).show();
+            webView.loadUrl(WEBSITE_URL);
+        } else {
+            webView.restoreState(savedInstanceState);
+        }
     }
 
     private boolean routeNavigation(Uri uri) {

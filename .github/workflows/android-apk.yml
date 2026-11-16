@@ -1,4 +1,4 @@
-name: Compiler MY EV CAR Android
+name: Compiler myevcarv1 Android
 on:
   workflow_dispatch:
   push:
@@ -23,23 +23,31 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
-      - name: Verifier l'adresse du site
+      - name: Verifier le nouveau package et le site
         run: |
+          grep -Fq "applicationId 'com.myevcar.v1'" app/build.gradle
+          grep -Fq 'android:label="myevcarv1"' app/src/main/AndroidManifest.xml
           grep -Fq 'https://broad-moon-14ca.phmelloul.workers.dev/' app/src/main/java/com/myevcar/mobile/MainActivity.java
-      - name: Compiler l'APK de test
+          grep -Fq 'LOAD_NO_CACHE' app/src/main/java/com/myevcar/mobile/MainActivity.java
+      - name: Compiler l'APK
         run: gradle --no-daemon assembleDebug
-      - name: Verifier l'APK
+      - name: Verifier identifiant et signature de l'APK
+        shell: bash
         run: |
           set -euo pipefail
           APK=app/build/outputs/apk/debug/app-debug.apk
           test -s "$APK"
           unzip -tq "$APK"
-          unzip -l "$APK" | grep -F 'classes.dex'
-          ls -lh "$APK"
-      - name: Fournir l'APK Android V41
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | tee apk-info.txt
+          grep -Fq "package: name='com.myevcar.v1'" apk-info.txt
+          grep -Fq "application-label:'myevcarv1'" apk-info.txt
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
+          cp "$APK" myevcarv1.apk
+          ls -lh myevcarv1.apk
+      - name: Fournir myevcarv1 APK
         uses: actions/upload-artifact@v4
         with:
-          name: MY_EV_CAR_ANDROID_V41_SITE_LIVE
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: myevcarv1-android-test
+          path: myevcarv1.apk
           if-no-files-found: error
           retention-days: 30

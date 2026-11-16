@@ -1,11 +1,13 @@
-# MY EV CAR Android V38 — site intégré
+# myevcarv1 - application Android de test
 
-Application Android MY EV CAR. La V38 embarque exactement le site statique V36 (HTML, JavaScript et fichiers images locaux) à l'intérieur de l'APK. Le site local est servi par WebView via l'origine HTTPS interne appassets.androidplatform.net. Aucun serveur n'est nécessaire pour l'accueil, les fiches véhicules et les articles intégrés.
+Cette nouvelle application est installee independamment de la precedente (applicationId: com.myevcar.v1).
 
-Les liens et images hébergés par des sites tiers nécessitent toujours Internet. Le bouton WhatsApp reste configurable en modifiant whatsapp-config.js dans l'archive source, puis en reconstruisant l'APK.
+- Nom affiche sur le telephone: myevcarv1
+- Site charge: https://broad-moon-14ca.phmelloul.workers.dev/
+- Chargement WebView direct, sans copie V36 integree
+- Cache desactive pour faciliter le diagnostic des modifications du site
+- Internet necessaire
 
-## Compilation
-GitHub Actions > Compiler MY EV CAR Android > Run workflow. L'artefact MY_EV_CAR_ANDROID_V38_COMPLET contient l'APK de test signé automatiquement par Gradle. Si le téléphone a une ancienne application signée avec une autre clé, la désinstaller d'abord.
+Compilation: Actions > Compiler myevcarv1 Android > artefact myevcarv1-android-test, fichier myevcarv1.apk.
 
-## Intégrité
-L'archive du site V36 originale (11 894 821 octets) a été séparée en 23 morceaux binaires dans site_package. GitHub Actions les réassemble, vérifie SHA-256, puis les extrait dans app/src/main/assets/site avant de compiler. Cela garantit l'absence de perte ou de substitution de photos.
+Il s'agit d'une APK de test signee avec la cle de debug de GitHub Actions. Ne pas publier sur le Play Store en l'etat.
