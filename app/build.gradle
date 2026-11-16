@@ -5,12 +5,12 @@ android {
     namespace 'com.myevcar.mobile'
     compileSdk 35
     defaultConfig {
-        // Nouvelle application indépendante de la précédente MY EV CAR.
-        applicationId 'com.myevcar.v1'
+        // Identifiant neuf pour etre installable sans conflit avec les essais precedents
+        applicationId 'com.myevcar.v1.complete'
         minSdk 24
         targetSdk 35
         versionCode 1
-        versionName '1.0'
+        versionName '1.0-full'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
