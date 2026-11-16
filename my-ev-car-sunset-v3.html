@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="MY EV CAR Martinique : Astraux L6 Ultra, Astraux AL7 Pro L7e, Linktour Alumi Pro L6e et Linktour Alumi Elite+ L7e. Galeries, équipements et fiches techniques." name="description"/><title>MY EV CAR — Design Lab (aperçu)</title><style>
+:root{--navy:#101922;--ink:#17232b;--sub:#66717a;--green:#b2f0ce;--paper:#f6f7f6;--border:#e4e8e7}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--paper);color:var(--ink)}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}.top{position:sticky;z-index:20;top:0;background:#101922;color:#fff}.nav{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-size:1.32rem;letter-spacing:.12em;font-weight:850}.brand span{color:var(--green)}nav{display:flex;gap:24px;font-size:.92rem;color:#d6e0e1}nav a:hover{color:var(--green)}.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:#357c65}.hero{background:#e8edeb;padding:38px 0 46px}.hero-grid{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:30px;min-height:490px}.hero h1{font-size:clamp(2.5rem,5.6vw,5.15rem);letter-spacing:-.066em;line-height:1.03;margin:16px 0}.hero p{font-size:1.08rem;color:#43545a;max-width:430px}.hero-img{width:100%;object-fit:contain;mix-blend-mode:multiply;border-radius:22px}.cta{display:inline-flex;align-items:center;gap:12px;border:0;border-radius:99px;background:var(--navy);color:white;padding:13px 24px;font-weight:750;margin-top:12px}.cta:hover{background:#274638}.section{padding:70px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.head h2{font-size:clamp(1.9rem,3.7vw,2.8rem);letter-spacing:-.045em;margin:7px 0}.head p{color:var(--sub);max-width:490px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}.model{background:white;border:1px solid var(--border);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}.model .photo{width:100%;aspect-ratio:1.25;object-fit:contain;background:#ecefee}.model .info{padding:22px;display:flex;flex-direction:column;flex:1}.model h3{margin:5px 0;font-size:1.45rem;letter-spacing:-.03em}.model p{color:var(--sub);margin:4px 0 16px}.pill{font-weight:800;font-size:.7rem;color:#2b7560;text-transform:uppercase;letter-spacing:.1em}.model .action{margin-top:auto;border:1px solid #bdc9c7;background:white;border-radius:9px;padding:11px 13px;text-align:center;font-weight:750}.model .action:hover{background:#ecf8f1}.soft{background:#e9efed}.footer{padding:38px 0;background:var(--navy);color:#d4dfdd}.footer p{color:#afc2bd}.footrow{display:flex;justify-content:space-between;gap:20px;align-items:center}.muted{color:var(--sub)}
+/* Fiche détaillée */
+.detail{display:none;background:#f7f8f7;min-height:calc(100vh - 72px);padding:26px 0 75px}.detail.active{display:block}.home.hidden{display:none}.back{border:0;background:none;padding:8px 0;color:#425d53;font-weight:750}.detail-header{padding:20px 0 22px}.detail-header h1{font-size:clamp(2.2rem,5vw,4.2rem);letter-spacing:-.06em;line-height:1.08;margin:9px 0}.detail-header p{margin:0;color:#67757a}.detail-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,0.75fr);gap:29px}.gallery{min-width:0}.stage{position:relative;border-radius:18px;background:#e8ebeb;overflow:hidden;display:grid;place-items:center;aspect-ratio:1.43}.stage img{height:100%;width:100%;object-fit:contain}.photo-nav{position:absolute;top:50%;transform:translateY(-50%);border:0;background:rgba(255,255,255,.88);height:42px;width:42px;border-radius:50%;font-size:24px;box-shadow:0 3px 13px #0002}.prev{left:14px}.next{right:14px}.photo-count{position:absolute;right:15px;bottom:14px;background:#17262bdc;color:white;font-size:.8rem;padding:5px 10px;border-radius:99px}.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:12px}.thumb{border:2px solid transparent;border-radius:11px;padding:0;background:#e5e9e8;overflow:hidden;aspect-ratio:1.15}.thumb.selected{border-color:#2b9374}.thumb img{width:100%;height:100%;object-fit:cover}.panel{border:1px solid var(--border);background:white;border-radius:18px;padding:25px}.panel h2{font-size:1.5rem;letter-spacing:-.03em;margin:0 0 12px}.panel p{color:#68777c}.dims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:24px 0}.metric{padding:13px 6px;border-radius:10px;background:#f0f4f2;text-align:center}.metric strong{font-size:1.1rem;display:block}.metric small{font-size:.73rem;color:#61736d}.note{font-size:.77rem;color:#6d7c7b!important}.info-btn{width:100%;border:0;background:#101922;color:#fff;padding:13px;border-radius:9px;font-weight:800}.detail-extra{margin-top:26px;border-top:1px solid var(--border);padding-top:20px}.tagline{font-weight:700;color:#2c6956}.hidden{display:none!important}@media(max-width:900px){.hero-grid,.detail-layout{grid-template-columns:1fr}.hero-grid{min-height:0}.hero-img{max-height:420px}.cards{grid-template-columns:1fr 1fr}.detail-layout .panel{order:-1}}@media(max-width:600px){.wrap{width:calc(100% - 28px)}.nav{min-height:62px}.brand{font-size:1.06rem}nav{gap:12px;font-size:.79rem}.hero{padding:25px 0}.hero h1{font-size:2.75rem}.cards{grid-template-columns:1fr}.section{padding:48px 0}.footrow,.head{display:block}.thumbs{grid-template-columns:repeat(4,1fr)}.dims{gap:5px}.metric strong{font-size:.98rem}.detail-header h1{font-size:2.6rem}}
+
+.hero-photo-link,.card-photo-link{display:block;border:0;padding:0;background:transparent;text-align:left;cursor:pointer;width:100%;border-radius:20px;overflow:hidden}.hero-photo-link:focus-visible,.card-photo-link:focus-visible{outline:3px solid #2e8566;outline-offset:4px}.hero-photo-link .hero-img{width:100%;transition:transform .2s ease}.hero-photo-link:hover .hero-img,.card-photo-link:hover .photo{transform:scale(1.015)}.card-photo-link .photo{width:100%;transition:transform .2s ease}.cards:has(> .model:only-child){grid-template-columns:minmax(260px,520px)}
+
+.safety-section{margin-top:40px;border-top:1px solid #dce5e1;padding-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.safety-heading{grid-column:1/-1}.safety-heading h2{font-size:1.8rem;margin:8px 0}.safety-heading p{color:#66717a}.safety-figure{margin:0;background:#fff;border:1px solid #dfe6e3;border-radius:15px;padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}.safety-figure img{width:100%;max-width:320px;max-height:250px;object-fit:contain;image-rendering:auto}.safety-figure figcaption{font-size:.9rem;font-weight:700;color:#536b62}@media(max-width:650px){.safety-section{grid-template-columns:1fr}}
+.opts-top{margin-bottom:25px}.options-button{width:100%;border:0;border-radius:12px;background:#153b30;color:#fff;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;font-weight:800;text-align:left;font-size:1rem}.options-button:hover{background:#265b47}.options-panel{padding:15px 17px;margin-top:10px;border:1px solid #d6e4dc;border-radius:12px;background:#f5faf7}.options-panel[hidden]{display:none}.options-panel h3{margin:0 0 9px;font-size:1rem}.options-panel ul{padding-left:20px;margin:0;line-height:1.65}.options-panel li{margin:5px 0}.argument-section{margin:38px 0;border-top:1px solid #dce5e1;padding-top:28px}.argument-section h2{font-size:1.8rem;margin:8px 0 18px}.argument-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.argument-grid article{padding:17px;border:1px solid #dce5e1;background:#fff;border-radius:12px}.argument-grid h3{margin:0 0 8px;font-size:1rem}.argument-grid p{margin:0;color:#66717a;font-size:.91rem}@media(max-width:850px){.argument-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.argument-grid{grid-template-columns:1fr}}
+
+/* MY EV CAR V11 — fiche constructeur AL7 Pro intégrale */
+.section-intro{color:#64747a;line-height:1.6;margin:-4px 0 22px}
+.spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.spec-card,.equip-card{border:1px solid #dbe5e0;background:#fff;border-radius:15px;padding:22px;min-width:0}
+.spec-card h3,.equip-card h3{margin:0 0 14px;font-size:1.16rem;color:#163b2f}
+.spec-list{margin:0}.spec-list>div{display:flex;justify-content:space-between;gap:22px;border-bottom:1px solid #edf1ee;padding:9px 0;font-size:.92rem;line-height:1.5}
+.spec-list>div:last-child{border-bottom:0}.spec-list dt{color:#64747a;flex:0 0 46%}.spec-list dd{margin:0;font-weight:700;text-align:right;overflow-wrap:anywhere}
+.equip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.equip-card ul{margin:0;padding:0;list-style:none}.equip-card li{padding:8px 0 8px 28px;position:relative;border-bottom:1px solid #edf1ee;line-height:1.4}.equip-card li:last-child{border-bottom:0}
+.equip-card li:before{content:'✓';position:absolute;left:0;top:7px;color:#168562;font-weight:900}
+.charge-box{background:#f2f8f4;border:1px solid #cfe4d5;border-radius:16px;padding:22px;margin-top:20px}.charge-box h3{margin:0 0 16px}.charge-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.charge-metrics>div{background:#fff;padding:16px;border-radius:10px}.charge-metrics strong{display:block;font-size:1.35rem;color:#164a37;margin-bottom:7px}.charge-metrics span{color:#61716c;font-size:.84rem}
+.availability-note{padding:20px;border-left:4px solid #b5a36b;background:#fbf9f2;border-radius:9px;margin:20px 0}.availability-note h3{margin:0 0 8px}.availability-note p{margin:0;color:#655f50;line-height:1.55}
+.al7-anchor{display:block;text-align:center;text-decoration:none;margin-top:12px}.al7-anchor-secondary{background:#e9f3ec!important;color:#20593c!important}
+@media(max-width:800px){.spec-grid,.equip-grid{grid-template-columns:1fr}.charge-metrics{grid-template-columns:1fr}}
+@media(max-width:550px){.spec-card,.equip-card{padding:17px}.spec-list>div{display:block}.spec-list dt{margin-bottom:3px}.spec-list dd{text-align:left}}
+
+/* MY EV CAR V12 - coût indicatif de recharge Astraux */
+.charge-teaser{background:#e8f5eb;color:#175139;border:1px solid #bfdfca;border-radius:12px;padding:10px 12px;margin:10px 0 15px!important;line-height:1.35}
+.charge-teaser strong{display:block;font-size:1.06rem}
+.charge-teaser small{display:block;color:#516a5d;font-size:.73rem;margin-top:4px}
+
+/* V19 — offre mise en évidence dans le bandeau noir */
+/* V20 : annonce bien centree dans toute la barre noire, en majuscules. */
+.nav{display:grid;grid-template-columns:minmax(140px,1fr) minmax(0,3.2fr) minmax(140px,1fr);align-items:center;column-gap:12px}
+.nav > .brand{justify-self:start;white-space:nowrap}
+.nav > nav{justify-self:end}
+.header-flash{min-width:0;color:#ffe33b;text-align:center;text-transform:uppercase;font-weight:900;font-size:clamp(1.22rem,2.1vw,1.55rem);line-height:1.1;letter-spacing:.005em;-webkit-text-stroke:.45px currentColor;text-shadow:0 0 .35px currentColor;transform:translateY(-3px);animation:header-yellow-blink 1.45s ease-in-out infinite}
+@keyframes header-yellow-blink{0%,100%{opacity:1}50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.header-flash{animation:none}}
+@media(max-width:980px){.nav{display:grid;grid-template-columns:1fr auto;column-gap:12px;row-gap:8px;padding:9px 0}.nav > .brand{grid-column:1;grid-row:1}.nav > nav{grid-column:2;grid-row:1}.header-flash{grid-column:1/-1;grid-row:2;font-size:clamp(1.13rem,3vw,1.38rem);white-space:normal}}
+@media(max-width:420px){.header-flash{font-size:1.12rem;letter-spacing:0}}
+
+/* V23 — quatre fiches : grille équilibrée en deux colonnes sur ordinateur */
+@media(min-width:901px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* V23 — galerie Linktour Alumi Pro L6e */
+#alumiProDetail .thumbs{max-height:330px;overflow-y:auto;scrollbar-width:thin}
+#alumiProDetail .thumb{overflow:hidden}
+#alumiProDetail .thumb img{height:100%;object-fit:cover}
+@media(max-width:800px){#alumiProDetail .thumbs{max-height:unset;overflow-y:visible}}
+
+/* V28 - présentation originale Alumi Pro : jeunes conducteurs */
+#articleJeunesDetail .pro-ado-editorial{padding:42px 0 8px;border-top:1px solid #dce7e1;margin-top:34px}
+#articleJeunesDetail .pro-ado-lead{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,1fr);gap:30px;align-items:center}
+#articleJeunesDetail .pro-ado-lead figure{margin:0}
+#articleJeunesDetail .pro-ado-lead img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:20px}
+#articleJeunesDetail .pro-ado-lead figcaption{color:#65716c;font-size:.73rem;margin-top:8px}
+#articleJeunesDetail .pro-ado-lead h2{font-size:clamp(2rem,3.2vw,3rem);line-height:1.09;letter-spacing:-.045em;margin:11px 0 17px}
+#articleJeunesDetail .pro-ado-lead p{color:#455b52;font-size:1.05rem}
+#articleJeunesDetail .pro-ado-keyfacts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+#articleJeunesDetail .pro-ado-keyfacts span{background:#e3efe8;border:1px solid #cbded0;color:#285943;padding:8px 12px;border-radius:999px;font-size:.88rem;font-weight:800}
+#articleJeunesDetail .pro-ado-heading{margin:34px 0 17px;font-size:1.5rem;letter-spacing:-.03em}
+#articleJeunesDetail .pro-ado-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#articleJeunesDetail .pro-ado-tiles article{padding:22px;border:1px solid #e1e9e3;background:white;border-radius:17px}
+#articleJeunesDetail .pro-ado-tiles h4{margin:0 0 8px;color:#173b2d;font-size:1.05rem}
+#articleJeunesDetail .pro-ado-tiles p{margin:0;color:#596a65;font-size:.92rem;line-height:1.55}
+#articleJeunesDetail .pro-ado-end{margin-top:18px;padding:18px 22px;background:#edf4ef;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+#articleJeunesDetail .pro-ado-end p{margin:0;max-width:680px;font-size:.94rem;color:#3d564b}
+#articleJeunesDetail .pro-ado-end button{white-space:nowrap;background:#17362b;border:0;border-radius:99px;color:#fff;padding:12px 18px;font-weight:750}
+@media(max-width:850px){#articleJeunesDetail .pro-ado-lead{grid-template-columns:1fr}#articleJeunesDetail .pro-ado-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){#articleJeunesDetail .pro-ado-tiles{grid-template-columns:1fr}#articleJeunesDetail .pro-ado-end{display:block}#articleJeunesDetail .pro-ado-end button{margin-top:14px;white-space:normal}#articleJeunesDetail .pro-ado-editorial{padding-top:30px}}
+
+/* V29 — espace conseils en bas de l'accueil */
+#conseils{background:#eef3ef;border-top:1px solid #dce7e1;padding:72px 0 82px;scroll-margin-top:82px}
+#conseils .conseils-intro{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:25px}
+#conseils .conseils-intro h2{font-size:clamp(2rem,3.7vw,3rem);letter-spacing:-.05em;line-height:1.1;margin:8px 0 5px}
+#conseils .conseils-intro p{max-width:520px;color:#54645d;margin:0}
+.conseils-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,285px),1fr));gap:20px}
+.conseil-card{display:block;overflow:hidden;background:white;border:1px solid #d9e5dd;border-radius:19px;box-shadow:0 6px 24px #1530270a;max-width:395px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.conseil-card:hover{transform:translateY(-4px);box-shadow:0 13px 33px #1530271e;border-color:#a7c5b2}
+.conseil-card:focus-visible{outline:3px solid #2a8669;outline-offset:4px}
+.conseil-card img{width:100%;height:auto;aspect-ratio:1.6;object-fit:cover;object-position:center;display:block}
+.conseil-card .conseil-body{padding:21px 23px 23px}
+.conseil-card .conseil-label{font-size:.74rem;font-weight:850;color:#40826b;letter-spacing:.12em;text-transform:uppercase}
+.conseil-card h3{font-size:1.35rem;line-height:1.21;letter-spacing:-.03em;color:#192d27;margin:9px 0 10px}
+.conseil-card p{font-size:.94rem;color:#5b6b64;line-height:1.55;margin:0 0 15px}
+.conseil-card .conseil-cta{color:#1c694f;font-weight:850;font-size:.94rem}
+#articleJeunesDetail{background:#f4f7f4}
+#articleJeunesDetail .pro-ado-editorial{border-top:none;margin-top:0;padding-top:18px}
+#articleJeunesDetail .article-return{margin:3px 0 15px}
+@media(max-width:650px){#conseils{padding:52px 0 62px}#conseils .conseils-intro{display:block}#conseils .conseils-intro p{margin-top:10px}.conseil-card{max-width:none}}
+@media(prefers-reduced-motion:reduce){.conseil-card{transition:none}.conseil-card:hover{transform:none}}
+
+/* Deuxième article — même carte et même mise en page */
+/* V28 - présentation originale Alumi Pro : jeunes conducteurs */
+#articleParentsDetail .pro-ado-editorial{padding:42px 0 8px;border-top:1px solid #dce7e1;margin-top:34px}
+#articleParentsDetail .pro-ado-lead{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,1fr);gap:30px;align-items:center}
+#articleParentsDetail .pro-ado-lead figure{margin:0}
+#articleParentsDetail .pro-ado-lead img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:20px}
+#articleParentsDetail .pro-ado-lead figcaption{color:#65716c;font-size:.73rem;margin-top:8px}
+#articleParentsDetail .pro-ado-lead h2{font-size:clamp(2rem,3.2vw,3rem);line-height:1.09;letter-spacing:-.045em;margin:11px 0 17px}
+#articleParentsDetail .pro-ado-lead p{color:#455b52;font-size:1.05rem}
+#articleParentsDetail .pro-ado-keyfacts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+#articleParentsDetail .pro-ado-keyfacts span{background:#e3efe8;border:1px solid #cbded0;color:#285943;padding:8px 12px;border-radius:999px;font-size:.88rem;font-weight:800}
+#articleParentsDetail .pro-ado-heading{margin:34px 0 17px;font-size:1.5rem;letter-spacing:-.03em}
+#articleParentsDetail .pro-ado-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#articleParentsDetail .pro-ado-tiles article{padding:22px;border:1px solid #e1e9e3;background:white;border-radius:17px}
+#articleParentsDetail .pro-ado-tiles h4{margin:0 0 8px;color:#173b2d;font-size:1.05rem}
+#articleParentsDetail .pro-ado-tiles p{margin:0;color:#596a65;font-size:.92rem;line-height:1.55}
+#articleParentsDetail .pro-ado-end{margin-top:18px;padding:18px 22px;background:#edf4ef;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+#articleParentsDetail .pro-ado-end p{margin:0;max-width:680px;font-size:.94rem;color:#3d564b}
+#articleParentsDetail .pro-ado-end button{white-space:nowrap;background:#17362b;border:0;border-radius:99px;color:#fff;padding:12px 18px;font-weight:750}
+@media(max-width:850px){#articleParentsDetail .pro-ado-lead{grid-template-columns:1fr}#articleParentsDetail .pro-ado-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){#articleParentsDetail .pro-ado-tiles{grid-template-columns:1fr}#articleParentsDetail .pro-ado-end{display:block}#articleParentsDetail .pro-ado-end button{margin-top:14px;white-space:normal}#articleParentsDetail .pro-ado-editorial{padding-top:30px}}
+
+
+#articleParentsDetail{background:#f4f7f4}
+#articleParentsDetail .pro-ado-editorial{border-top:none;margin-top:0;padding-top:18px}
+#articleParentsDetail .article-return{margin:3px 0 15px}
+
+/* Deuxième article — même carte et même mise en page */
+/* V28 - présentation originale Alumi Pro : jeunes conducteurs */
+#articleSecuriteDetail .pro-ado-editorial{padding:42px 0 8px;border-top:1px solid #dce7e1;margin-top:34px}
+#articleSecuriteDetail .pro-ado-lead{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,1fr);gap:30px;align-items:center}
+#articleSecuriteDetail .pro-ado-lead figure{margin:0}
+#articleSecuriteDetail .pro-ado-lead img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:20px}
+#articleSecuriteDetail .pro-ado-lead figcaption{color:#65716c;font-size:.73rem;margin-top:8px}
+#articleSecuriteDetail .pro-ado-lead h2{font-size:clamp(2rem,3.2vw,3rem);line-height:1.09;letter-spacing:-.045em;margin:11px 0 17px}
+#articleSecuriteDetail .pro-ado-lead p{color:#455b52;font-size:1.05rem}
+#articleSecuriteDetail .pro-ado-keyfacts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+#articleSecuriteDetail .pro-ado-keyfacts span{background:#e3efe8;border:1px solid #cbded0;color:#285943;padding:8px 12px;border-radius:999px;font-size:.88rem;font-weight:800}
+#articleSecuriteDetail .pro-ado-heading{margin:34px 0 17px;font-size:1.5rem;letter-spacing:-.03em}
+#articleSecuriteDetail .pro-ado-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#articleSecuriteDetail .pro-ado-tiles article{padding:22px;border:1px solid #e1e9e3;background:white;border-radius:17px}
+#articleSecuriteDetail .pro-ado-tiles h4{margin:0 0 8px;color:#173b2d;font-size:1.05rem}
+#articleSecuriteDetail .pro-ado-tiles p{margin:0;color:#596a65;font-size:.92rem;line-height:1.55}
+#articleSecuriteDetail .pro-ado-end{margin-top:18px;padding:18px 22px;background:#edf4ef;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+#articleSecuriteDetail .pro-ado-end p{margin:0;max-width:680px;font-size:.94rem;color:#3d564b}
+#articleSecuriteDetail .pro-ado-end button{white-space:nowrap;background:#17362b;border:0;border-radius:99px;color:#fff;padding:12px 18px;font-weight:750}
+@media(max-width:850px){#articleSecuriteDetail .pro-ado-lead{grid-template-columns:1fr}#articleSecuriteDetail .pro-ado-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){#articleSecuriteDetail .pro-ado-tiles{grid-template-columns:1fr}#articleSecuriteDetail .pro-ado-end{display:block}#articleSecuriteDetail .pro-ado-end button{margin-top:14px;white-space:normal}#articleSecuriteDetail .pro-ado-editorial{padding-top:30px}}
+
+
+#articleSecuriteDetail{background:#f4f7f4}
+#articleSecuriteDetail .pro-ado-editorial{border-top:none;margin-top:0;padding-top:18px}
+#articleSecuriteDetail .article-return{margin:3px 0 15px}
+
+
+/* V35 : photographies productives de la véritable Alumi, sans redessin de carrosserie */
+.conseil-card img.alumi-real-photo{aspect-ratio:2.05;object-fit:contain;background:#e9efeb}
+#articleJeunesDetail .pro-ado-lead img.alumi-real-photo,
+#articleSecuriteDetail .pro-ado-lead img.alumi-real-photo{aspect-ratio:2.05;object-fit:contain;background:#e9efeb}
+
+/* V36 — Bouton WhatsApp sur chaque page */
+.my-ev-wa-button{position:fixed;right:22px;bottom:22px;z-index:100;display:flex;align-items:center;justify-content:center;gap:9px;border:2px solid #fff;border-radius:999px;background:#25d366;color:#073b22;padding:12px 19px;min-height:55px;box-shadow:0 6px 24px rgba(0,0,0,.24);font:800 1rem/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.my-ev-wa-button:hover{background:#1fbc59;transform:translateY(-2px)}
+.my-ev-wa-button:focus-visible{outline:3px solid #0a8554;outline-offset:4px}
+.my-ev-wa-button svg{width:27px;height:27px;flex-shrink:0}
+.my-ev-wa-notice{position:fixed;right:22px;bottom:90px;z-index:101;max-width:min(325px,calc(100vw - 38px));padding:12px 16px;border-radius:14px;background:#173d2b;color:#fff;font-size:.92rem;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+.my-ev-wa-notice[hidden]{display:none}
+@media(max-width:600px){.my-ev-wa-button{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));min-height:52px;padding:10px 15px;font-size:.93rem}.my-ev-wa-notice{right:14px;bottom:calc(78px + env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){.my-ev-wa-button{transition:none}}
+
+/* V40 — bandeau comparatif professionnel, photos ameliorées */
+.bandeau-comparatif{background:#000;overflow:hidden;border-bottom:1px solid #243b24}
+.bandeau-comparatif .bandeau-scroll{width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-color:#8fd808 #000;scrollbar-width:thin}
+.bandeau-comparatif img{display:block;width:100%;height:auto;margin-inline:auto;max-width:1916px}
+@media(max-width:700px){
+  .bandeau-comparatif img{width:1100px;max-width:none}
+  .bandeau-comparatif .bandeau-scroll{scroll-snap-type:x proximity}
+}
+</style><style>/* MY EV CAR design lab — separate visual layer, original content preserved. */
+:root{--navy:#173c39;--ink:#15312f;--sub:#657b76;--paper:#fbfcf9;--sea:#0e806f;--shade:0 18px 45px rgba(21,65,52,.075)}
+html{scroll-padding-top:100px}body{background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid #e0a864;outline-offset:4px}.wrap{width:min(1250px,calc(100% - 64px))}
+.top{background:rgba(255,255,255,.96);color:#163932;border-bottom:1px solid #e2eae6;box-shadow:0 4px 24px #214f4210;backdrop-filter:blur(16px)}.nav{min-height:86px;gap:26px}.brand{font-size:1.4rem;letter-spacing:-.05em;font-weight:900;white-space:nowrap}.brand span{color:#0c9577}.nav>nav{display:flex;align-items:center;gap:15px;color:#31524b;font-size:.91rem;font-weight:730}.nav>nav a{padding:10px 18px;border-radius:100px}.nav>nav a:hover{color:#086e5b;background:#edf7f2}.nav>nav a[href="#contact"]{background:#0e7766;color:#fff}.header-flash{transform:none;animation:none!important;-webkit-text-stroke:0;text-shadow:none;color:#59716a;font-size:.69rem;font-weight:850;letter-spacing:.065em;line-height:1.3;max-width:400px;white-space:normal;background:#f2f8f3;border:1px solid #e0eee5;border-radius:60px;padding:9px 17px}
+#accueil.bandeau-comparatif{background:linear-gradient(180deg,#f6faf7,#f1f7f2);border:0;padding:28px max(25px,calc((100vw - 1310px)/2)) 20px}#accueil .bandeau-scroll{overflow:hidden;border-radius:24px;box-shadow:0 16px 44px #123d352c;background:#020604}#accueil .bandeau-scroll img{width:100%;max-width:none;height:auto;display:block}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 77% 43%,#dbf3e8,#edf8f2 36%,transparent 65%),linear-gradient(110deg,#fffdf8,#f3faf5);padding:72px 0 88px}.hero-grid{min-height:0;grid-template-columns:1fr 1.05fr;gap:70px}.eyebrow{color:#0e806a;font-size:.74rem;font-weight:850;letter-spacing:.13em}.hero h1{font-size:clamp(3.25rem,5.4vw,5.75rem);line-height:1.035;letter-spacing:-.07em;color:#163c35;max-width:680px;margin:24px 0}.hero p{font-size:1.11rem;line-height:1.8;color:#547069;max-width:530px}.cta{background:#0d7f69;color:#fff;border-radius:15px;padding:16px 25px;font-weight:800;box-shadow:0 14px 28px #0d7f6929}.cta:hover{background:#0b5e50}
+.hero-photo-link{position:relative;min-height:410px;display:flex;align-items:center;justify-content:center;border-radius:34px;background:radial-gradient(circle at 44% 42%,#f9fff7,#dff4e6 53%,#bbdfd6);border:1px solid #d8eadd;box-shadow:0 24px 55px #245f4d19;overflow:hidden}.hero-photo-link:after{content:"100 % électrique";position:absolute;top:22px;left:22px;padding:7px 13px;border-radius:40px;background:#ffffffde;color:#1b7562;border:1px solid #cde5d5;font-size:.77rem;font-weight:850}.hero-photo-link .hero-img{object-fit:contain;mix-blend-mode:multiply;max-height:415px;width:91%;filter:drop-shadow(0 16px 14px #24554b25)}
+.section{padding:94px 0}#vehicules{background:linear-gradient(#fff,#fbfdfb)}.head{align-items:end;margin-bottom:37px;gap:38px}.head h2,.conseils-intro h2{font-size:clamp(2.25rem,3.9vw,3.45rem);line-height:1.13;letter-spacing:-.055em;color:#183d35}.head p{font-size:1.02rem;color:#6b817a}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.model{border:1px solid #e0ece4;border-radius:26px;overflow:hidden;background:#fff;display:grid;grid-template-columns:minmax(0,44%) minmax(0,56%);box-shadow:var(--shade);transition:transform .2s}.model:hover{transform:translateY(-4px)}.model .card-photo-link{height:100%;min-height:300px;border-radius:0;background:radial-gradient(circle at 45% 40%,#f9fff7,#eaf5ee 60%,#dcece3)}.model .photo,.model .card-photo-link .photo{height:100%;width:100%;aspect-ratio:auto;object-fit:contain;background:transparent;padding:14px;filter:drop-shadow(0 15px 10px #1f4f3e1a)}.model .info{padding:28px 27px 26px;gap:8px}.pill{font-size:.69rem;letter-spacing:.08em;background:#e9f8ed;color:#0e7765;border-radius:30px;padding:7px 12px}.model h3{font-size:1.62rem;line-height:1.17;letter-spacing:-.045em;margin:8px 0 4px;color:#173f36}.model p{font-size:.91rem;line-height:1.65;color:#6c807a}.model .charge-teaser{background:#f3f9f3;border:1px solid #e0efe3;border-radius:12px;padding:11px}.model .action{border:0;background:#0e7d6a;color:#fff;border-radius:12px;padding:13px 12px;margin-top:auto;font-size:.82rem}
+#conseils{background:#f5f9f5;padding:90px 0 110px;border-top:1px solid #e4eee7}.conseils-grid{gap:23px}.conseil-card{background:#fff;border-radius:25px;border:1px solid #e0ece4;box-shadow:var(--shade);overflow:hidden}.conseil-card>img{height:215px;width:100%;object-fit:cover}.conseil-card .conseil-body{padding:28px 27px 29px}.conseil-card h3{font-size:1.38rem;line-height:1.3;color:#153f37}.conseil-card .conseil-body p{color:#687c76}.conseil-cta{font-weight:820;color:#087765}
+#contact.soft{background:#e7f5ed;padding:65px 0 78px}#contact .wrap{background:#ffffffd9;border:1px solid #d0e8d9;box-shadow:0 20px 44px #18624813;border-radius:28px;padding:42px 48px}.footer{background:#173e38;color:#e8f5ec}
+@media(max-width:1020px){.hero-grid{grid-template-columns:1fr 1fr;gap:34px}.cards{grid-template-columns:1fr 1fr}.model{grid-template-columns:1fr}.model .card-photo-link{min-height:255px;height:255px}.model .info{padding:24px}.model .photo{height:255px}}
+@media(max-width:700px){.wrap{width:min(100% - 36px,640px)}.nav{min-height:72px;gap:10px;flex-wrap:wrap;justify-content:center;padding:10px 0}.brand{font-size:1.2rem}.header-flash{font-size:.61rem;padding:7px 10px;max-width:100%;order:3}.nav>nav{gap:6px}.nav>nav a{padding:8px 10px;font-size:.78rem}#accueil.bandeau-comparatif{padding:14px 0 7px}#accueil .bandeau-scroll{border-radius:0;overflow-x:auto}#accueil .bandeau-scroll img{width:1000px;max-width:none}.hero{padding:48px 0}.hero-grid{grid-template-columns:1fr;gap:32px}.hero h1{font-size:clamp(2.65rem,11vw,4.1rem)}.hero-photo-link{min-height:275px;border-radius:23px}.section{padding:58px 0}.cards{grid-template-columns:1fr;gap:18px}.model{grid-template-columns:1fr;border-radius:22px}.model .card-photo-link{min-height:245px;height:245px}.model .info{padding:20px 22px 23px}.head h2,.conseils-intro h2{font-size:clamp(2.1rem,8vw,2.8rem)}#conseils{padding:55px 0 65px}.conseils-grid{grid-template-columns:1fr}#contact.soft{padding:36px 0 50px}#contact .wrap{padding:28px 23px;border-radius:20px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
+</style><meta name="robots" content="noindex,nofollow"><style>
+/* ===== SUNSET DRIVE / DESIGN LAB V3. Original content and scripts preserved ===== */
+:root{--navy:#111d36;--ink:#111e36;--sub:#637089;--paper:#f9f8f4;--border:#dce4ef;--sun:#fff05f;--ocean:#116bdf;--coral:#ff866f;--card-shadow:0 23px 60px #1a2a5014}
+html{scroll-padding-top:95px}body{background:#f9f8f4;color:#16223a;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body .wrap{width:min(1260px,calc(100% - 72px));margin:auto}a:focus-visible,button:focus-visible{outline:3px solid #ff8c64;outline-offset:4px}
+body .top{position:sticky;top:0;z-index:110;background:#fffdfaee;color:#0f2341;border-bottom:1px solid #e5e4dc;box-shadow:0 8px 30px #101e3211;backdrop-filter:blur(14px)}
+body .nav{min-height:83px;gap:24px}
+body .brand{color:#101d38;font-weight:1000;font-size:1.46rem;letter-spacing:-.063em;white-space:nowrap}
+body .brand span{color:#0c72ed}
+body .header-flash{background:#fff064;color:#0d2341;border:1px solid #e5d748;border-radius:99px;box-shadow:none;text-shadow:none;transform:none;animation:none!important;font-size:.74rem;font-weight:950;letter-spacing:.025em;padding:10px 18px;text-align:center;line-height:1.4;white-space:normal;max-width:410px}
+body .nav>nav{gap:8px;font-size:.9rem;font-weight:850;color:#263a56;align-items:center}
+body .nav>nav>a{padding:13px 18px;border-radius:50px;transition:background .2s}
+body .nav>nav>a:hover{background:#e9effb;color:#125ed6}
+body .nav>nav>a[href="#contact"]{background:#112244;color:white;box-shadow:3px 4px 0 #ffbb86}
+body .nav>nav>a[href="#contact"]:hover{background:#0c63c4;color:#fff}
+.v3-introstrip{color:#e6f6ff;background:#0e2448}
+.v3-introstrip .wrap{min-height:49px;display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:.75rem}
+.v3-introstrip strong{font-size:.85rem;font-weight:650;color:#ecf5fc}
+.v3-live{font-weight:900;letter-spacing:.11em;color:#fff36e;white-space:nowrap}
+.v3-live i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#8df2a0;margin-right:7px;box-shadow:0 0 0 5px #81f2a123}
+.v3-issue{font-weight:750;letter-spacing:.08em;color:#a6cae4;white-space:nowrap}
+.v3-issue b{color:#ff9972;padding:0 5px}
+.v3-bandheader{padding:34px 0 20px;display:grid;grid-template-columns:170px 1fr auto;align-items:center;gap:24px}
+.v3-tag{font-size:.72rem;letter-spacing:.09em;font-weight:1000;color:#195bc0;background:#e9f0fd;border-radius:9px;line-height:1.4;padding:10px 12px;width:fit-content}
+.v3-bandline{font-size:clamp(1.15rem,2.3vw,1.85rem);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;letter-spacing:-.05em}
+.v3-bandline strong{font-weight:970;color:#091a34}
+.v3-bandline span{font-weight:550;color:#7b8796}
+.v3-bandheader>a{font-size:.84rem;font-weight:900;padding:12px 18px;background:#fef0ca;color:#12305b;border-radius:99px;white-space:nowrap;box-shadow:0 0 0 1px #f7e5b8}
+.v3-bandheader>a span{color:#075ad9}
+body .bandeau-comparatif{padding:0 max(32px,calc((100vw - 1260px)/2)) 52px;background:#f9f8f4;border:0;overflow:visible}
+body .bandeau-comparatif .bandeau-scroll{background:#060606;border-radius:24px;box-shadow:0 24px 40px #12294a30,0 0 0 1px #1a39604a;overflow-x:auto;scrollbar-color:#f1e75c #122b4b}
+body .bandeau-comparatif img{display:block;width:100%;max-width:1916px;height:auto;margin-inline:auto}
+body .hero{padding:88px 0 95px;background:radial-gradient(circle at 63% 5%,#f4f9ff 0 28%,transparent 45%),linear-gradient(124deg,#eaf1ff 0%,#e6f7f4 55%,#fff2dc 100%);position:relative;isolation:isolate;overflow:hidden}
+body .hero:before{content:"";position:absolute;border:2px solid #b6d5ff;border-radius:50%;width:900px;height:900px;right:-170px;top:-430px;z-index:-1;box-shadow:0 0 0 100px #d8e6ff45,0 0 0 240px #e3f3ff44}
+body .hero:after{content:"SUNSET DRIVE";position:absolute;right:-16px;bottom:-32px;color:#096bd513;letter-spacing:-.08em;font-size:clamp(6rem,16vw,16rem);font-weight:1000;line-height:1;pointer-events:none}
+body .hero-grid{grid-template-columns:.87fr 1.13fr;gap:40px;min-height:500px;align-items:center}
+body .hero .eyebrow{color:#1767d6;background:#fff;width:max-content;font-size:.74rem;border-radius:100px;padding:9px 16px;letter-spacing:.09em;box-shadow:0 4px 18px #1f4f9410}
+body .hero h1{font-size:clamp(3.8rem,6.8vw,7rem);letter-spacing:-.08em;line-height:.99;font-weight:1000;color:#0e2142;max-width:615px;margin:25px 0 30px}
+body .hero h1:after{content:"";display:block;width:145px;height:12px;border-radius:100px;background:linear-gradient(90deg,#ff9778,#ffe467);transform:rotate(-3deg);margin-top:29px}
+body .hero p{font-size:1.12rem;line-height:1.77;color:#576983;max-width:500px;margin-bottom:32px}
+body .hero .cta{background:#0b61cd;color:#fff;border-radius:13px;font-weight:900;display:inline-flex;padding:18px 24px;box-shadow:7px 7px 0 #b4d9f7;transition:transform .2s,box-shadow .2s}
+body .hero .cta:hover{transform:translate(3px,3px);background:#084ea7;box-shadow:4px 4px 0 #b4d9f7}
+body .hero-photo-link{position:relative;min-height:470px;height:470px;border:0;border-radius:41px;background:linear-gradient(140deg,#66d2d5 2%,#72a9f7 64%,#d5e0ff 100%);box-shadow:0 24px 50px #3760a12d;transform:rotate(2deg);display:flex;align-items:center;justify-content:center;overflow:hidden}
+body .hero-photo-link:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;border:65px solid #f8e36f8f;left:6%;top:11%;z-index:0}
+body .hero-photo-link:after{content:"⚡ 100% ÉLECTRIQUE";position:absolute;right:18px;top:20px;left:auto;padding:12px 17px;color:#102d54;font-size:.75rem;font-weight:1000;letter-spacing:.07em;background:#fff66f;border:0;border-radius:99px;transform:rotate(-8deg);z-index:2;box-shadow:0 6px 17px #0a39742e}
+body .hero-photo-link .hero-img{position:relative;z-index:1;width:101%;max-height:450px;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(0 25px 14px #17385d40);transform:rotate(-2deg);transition:transform .25s ease}
+body .hero-photo-link:hover .hero-img{transform:rotate(-2deg) scale(1.065)}
+.v3-speedbar{background:#0e2145;color:#fff;height:71px;overflow:hidden}
+.v3-speedbar .wrap{display:flex;justify-content:space-between;align-items:center;height:100%;gap:15px;font-size:.77rem;font-weight:950;letter-spacing:.11em}
+.v3-speedbar span:nth-child(2){color:#ffec70}.v3-speedbar span:nth-child(3){color:#91dce5}
+.v3-editorial{background:#f9f8f4;padding:98px 0 110px}
+.v3-intro-row{display:grid;grid-template-columns:1.15fr 2.5fr 1.2fr;align-items:end;gap:26px;margin-bottom:36px}
+.v3-mini{align-self:start;display:inline-flex;color:#1d64ba;font-size:.69rem;font-weight:950;letter-spacing:.12em;background:#e8f0fa;border-radius:10px;padding:12px}
+.v3-intro-row h2{font-size:clamp(2.3rem,3.5vw,4.25rem);font-weight:980;letter-spacing:-.068em;line-height:1.07;color:#112541;margin:0}
+.v3-intro-row h2 em{font-style:normal;color:#1168d7}
+.v3-intro-row p{line-height:1.7;color:#697487;font-size:.91rem;margin:0}
+.v3-visual-grid{display:grid;grid-template-columns:1.27fr .92fr .9fr;gap:18px;align-items:stretch}
+.v3-tile{position:relative;border-radius:25px;overflow:hidden;min-height:375px;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 26px #1c315121;transition:transform .22s ease,box-shadow .22s ease}
+.v3-tile:hover{transform:translateY(-7px);box-shadow:0 27px 44px #1c315123}
+.v3-tile-main{background:radial-gradient(circle at 35% 20%,#fff5b9,#ffd0b8 62%,#f0b7b7)}
+.v3-tile-side{background:radial-gradient(circle at 35% 25%,#dbfffc,#73c6c8 78%)}
+.v3-tile-small{background:radial-gradient(circle at 42% 24%,#d7e9ff,#92a6ef 78%)}
+.v3-tile img{max-width:93%;max-height:265px;object-fit:contain;filter:drop-shadow(0 20px 13px #12234035);mix-blend-mode:multiply;transition:transform .25s ease}
+.v3-tile:hover img{transform:scale(1.04)}
+.v3-tile-kicker{position:absolute;z-index:2;left:17px;top:20px;font-size:.7rem;font-weight:1000;letter-spacing:.09em;color:#23354f;background:#ffffffe8;padding:9px 13px;border-radius:99px}
+.v3-tile-footer{position:absolute;inset:auto 17px 17px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;border-radius:14px;background:#fffdf4f2;color:#102642;padding:14px 16px}
+.v3-tile-footer strong{font-size:.86rem;font-weight:1000;line-height:1.4;letter-spacing:.02em}
+.v3-tile-footer strong i{font-style:normal;color:#1666d2}
+.v3-tile-footer>span{font-size:.7rem;white-space:nowrap;font-weight:850;color:#2363a7}
+body #vehicules{background:#f0f5ff;padding:100px 0 120px;border-top:1px solid #e1e7f1}
+body .head{align-items:flex-end;gap:60px;margin-bottom:48px}
+body .head h2{font-size:clamp(2.6rem,4.8vw,5.1rem);font-weight:980;letter-spacing:-.073em;line-height:1.04;color:#0e2341}
+body #vehicules .eyebrow{color:#175fc2;background:#dfeafb;border-radius:100px;padding:7px 13px;width:fit-content;letter-spacing:.1em}
+body #vehicules .head p{max-width:330px;line-height:1.72;font-size:.96rem;color:#63748e}
+body .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
+body .model{display:grid;grid-template-columns:1fr;overflow:hidden;background:white;border:1px solid #e2e7f1;border-radius:23px;box-shadow:0 16px 40px #192a5010;transition:transform .22s,box-shadow .22s}
+body .model:hover{transform:translateY(-6px);box-shadow:0 28px 50px #192a5023}
+body .model .card-photo-link{display:flex;align-items:center;justify-content:center;width:100%;height:310px;min-height:310px;overflow:hidden;border:0;border-radius:0;background:radial-gradient(circle at 50% 45%,#f9faf9 0%,#c9dcff 78%);position:relative}
+body .model:nth-child(2) .card-photo-link{background:radial-gradient(circle at 50% 45%,#fffce9,#f4dfb0 80%)}
+body .model:nth-child(3) .card-photo-link{background:radial-gradient(circle at 50% 45%,#effffb,#a2e2d2 80%)}
+body .model:nth-child(4) .card-photo-link{background:radial-gradient(circle at 50% 45%,#f7f5ff,#bcbef4 80%)}
+body .model .photo{object-fit:contain;width:100%;height:290px;max-height:290px;padding:12px;background:transparent;filter:drop-shadow(0 18px 12px #1b346d23);transition:transform .22s}
+body .model:hover .photo{transform:scale(1.04)}
+body .model .info{padding:28px 33px 32px;display:flex;flex-direction:column;gap:9px;min-height:280px}
+body .model .pill{align-self:flex-start;color:#175dc6;background:#ebf2ff;border:1px solid #d9e5fd;border-radius:8px;font-size:.7rem;font-weight:900;letter-spacing:.04em;padding:7px 10px}
+body .model h3{font-size:clamp(1.8rem,2.5vw,2.5rem);letter-spacing:-.05em;font-weight:980;color:#10274a;margin:7px 0 5px;line-height:1.12}
+body .model .info>p{color:#667389;line-height:1.7;font-size:.95rem;margin:0 0 7px}
+body .model .charge-teaser{background:#f9fbec;border:1px solid #e5ebc5;border-radius:13px;padding:13px 15px;margin:4px 0 11px}
+body .model .charge-teaser strong{color:#385c35;font-size:.91rem}
+body .model .charge-teaser small{color:#7a816c;display:block;line-height:1.5;font-size:.73rem}
+body .model .action{background:#1166ce;color:#fff;border:0;border-radius:12px;font-size:.92rem;font-weight:900;min-height:49px;padding:14px 20px;margin-top:auto;transition:background .2s}
+body .model .action:hover{background:#0d4b9b}
+body #conseils{background:#fff8ee;padding:100px 0 110px}
+body #conseils .conseils-intro{margin-bottom:40px;align-items:end}
+body #conseils .eyebrow{color:#c7714e}
+body #conseils h2{font-size:clamp(2.6rem,4.9vw,4.8rem);font-weight:980;letter-spacing:-.072em;line-height:1.05;color:#192b43}
+body #conseils .conseils-intro p{font-size:.96rem;max-width:390px;color:#7b736b;line-height:1.7}
+body .conseils-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}
+body .conseil-card{display:block;overflow:hidden;background:white;border:1px solid #eee5d7;border-radius:20px;box-shadow:0 15px 35px #83634612;transition:transform .22s,box-shadow .22s}
+body .conseil-card:hover{transform:translateY(-6px);box-shadow:0 25px 48px #8363461e}
+body .conseil-card>img{height:220px;min-height:0;width:100%;object-fit:cover}
+body .conseil-card .conseil-body{padding:25px}
+body .conseil-card .conseil-label{color:#bd7556;font-size:.72rem;font-weight:950;letter-spacing:.07em}
+body .conseil-card h3{color:#1a2c48;font-size:1.45rem;line-height:1.24;font-weight:950;letter-spacing:-.03em}
+body .conseil-card .conseil-body p{color:#7f7c75;line-height:1.68;font-size:.91rem}
+body .conseil-cta{color:#1165cb;font-weight:900}
+body #contact.soft{background:#0e2343;color:white;padding:87px 0}
+body #contact .wrap{border-radius:28px;background:radial-gradient(circle at 91% 19%,#246fc2 0%,transparent 34%),linear-gradient(120deg,#122e58,#0e2343);padding:57px 62px;border:1px solid #41618a;box-shadow:0 18px 30px #06142d29}
+body #contact .eyebrow{color:#ffe26e}
+body #contact h2{color:white;font-size:clamp(2.5rem,4vw,4rem);font-weight:980;letter-spacing:-.06em}
+body #contact .wrap>p{color:#dae5f7}
+body .footer{background:#07192f;color:#c6d7e8;padding:39px 0}
+body .footer .brand{color:white}
+body .detail{background:#f9fafc;color:#1c2943}
+body .detail .detail-hero{background:#e9f2fd;color:#162b4d}
+body .detail h1,body .detail h2{color:#182d4e}
+body .detail .back{background:#e8f0ff;color:#1257be;border-radius:12px;padding:12px 17px;font-weight:850}
+@media(max-width:1060px){
+ body .wrap{width:min(100% - 44px,1000px)}
+ body .hero-grid{grid-template-columns:1fr 1fr;gap:24px}
+ body .hero-photo-link{height:380px;min-height:380px}
+ body .v3-intro-row{grid-template-columns:1fr 2fr;align-items:start}
+ body .v3-intro-row p{grid-column:2}
+ body .v3-visual-grid{grid-template-columns:1.15fr 1fr}
+ body .v3-tile-small{grid-column:1/-1;min-height:240px}
+ body .model .card-photo-link{height:280px;min-height:280px}
+}
+@media(max-width:700px){
+ body .wrap{width:min(100% - 32px,660px)}
+ body .nav{min-height:66px;padding:10px 0;flex-wrap:wrap;gap:8px}
+ body .brand{font-size:1.25rem}
+ body .nav>nav{gap:4px}
+ body .nav>nav>a{padding:9px 12px;font-size:.81rem}
+ body .header-flash{order:3;width:100%;max-width:100%;font-size:.67rem;padding:8px 12px}
+ .v3-introstrip .wrap{min-height:45px;justify-content:center}
+ .v3-introstrip strong{display:none}
+ .v3-live{font-size:.68rem}
+ .v3-issue{font-size:.64rem}
+ .v3-bandheader{grid-template-columns:1fr auto;gap:8px;padding:21px 0 17px}
+ .v3-tag{grid-column:1/-1;font-size:.65rem;padding:6px 10px}
+ .v3-bandline{font-size:1.12rem;gap:6px}
+ .v3-bandheader>a{padding:9px 11px;font-size:.7rem}
+ body .bandeau-comparatif{padding:0 0 26px}
+ body .bandeau-comparatif .bandeau-scroll{overflow-x:auto;border-radius:0}
+ body .bandeau-comparatif img{width:1100px;max-width:none}
+ body .hero{padding:58px 0 64px}
+ body .hero-grid{grid-template-columns:1fr;gap:32px;min-height:0}
+ body .hero h1{font-size:clamp(3.1rem,12vw,5.1rem)}
+ body .hero p{font-size:1rem}
+ body .hero-photo-link{height:320px;min-height:320px;border-radius:28px}
+ body .hero-photo-link .hero-img{width:100%;max-height:310px}
+ body .hero-photo-link:before{width:230px;height:230px;border-width:35px}
+ body .hero-photo-link:after{font-size:.62rem;right:9px;top:11px;padding:8px 11px}
+ .v3-speedbar{height:52px}
+ .v3-speedbar .wrap{width:max-content;min-width:100%;gap:35px;justify-content:space-around;font-size:.66rem}
+ .v3-speedbar span:last-child{display:none}
+ .v3-editorial{padding:62px 0 72px}
+ .v3-intro-row{display:block}
+ .v3-intro-row h2{font-size:clamp(2.2rem,8.5vw,3.25rem);margin:22px 0}
+ .v3-intro-row p{max-width:470px}
+ .v3-visual-grid{grid-template-columns:1fr;gap:16px}
+ .v3-tile,.v3-tile-small{min-height:295px;grid-column:auto}
+ .v3-tile img{max-height:215px}
+ body #vehicules{padding:67px 0 80px}
+ body .head{display:block;margin-bottom:35px}
+ body .head h2{font-size:clamp(2.45rem,9vw,3.6rem)}
+ body .head p{max-width:500px;margin-top:19px}
+ body .cards{grid-template-columns:1fr;gap:19px}
+ body .model{border-radius:19px}
+ body .model .card-photo-link{height:265px;min-height:265px}
+ body .model .photo{height:260px}
+ body .model .info{padding:24px 23px;min-height:0}
+ body #conseils{padding:66px 0 78px}
+ body #conseils h2{font-size:clamp(2.45rem,9vw,3.5rem)}
+ body .conseils-grid{grid-template-columns:1fr}
+ body #conseils .conseils-intro{display:block}
+ body #contact.soft{padding:40px 0 54px}
+ body #contact .wrap{padding:38px 25px;border-radius:21px}
+ body #contact h2{font-size:2.65rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style><meta name="robots" content="noindex,nofollow"><title>MY EV CAR — SUNSET DRIVE (maquette)</title></head><body>
+<header class="top"><div class="wrap nav"><a class="brand" href="#accueil" onclick="showHome()">MY <span>EV</span> CAR</a><strong class="header-flash">JE ROULE AVEC 1 CENTIME PAR KLM 100 KLM=1,00€</strong><nav><a href="#vehicules" onclick="showHome()">Véhicules</a><a href="#contact" onclick="showHome()">Contact</a></nav></div></header>
+<main class="home" id="home"><div class="v3-introstrip"><div class="wrap"><span class="v3-live"><i></i> SHOWROOM MARTINIQUE</span><strong>Chaque trajet mérite un peu de soleil.</strong><span class="v3-issue">MY EV CAR <b>·</b> ÉDITION SUNSET</span></div></div><div class="v3-bandheader wrap"><span class="v3-tag">LE MATCH DE L'ÉNERGIE</span><div class="v3-bandline"><strong>4 voitures.</strong><span>Deux façons de rouler.</span></div><a href="#vehicules">Trouver ma voiture <span aria-hidden="true">↗</span></a></div><section class="bandeau-comparatif" id="accueil" aria-label="Comparaison du coût de l’énergie pour 100 kilomètres entre véhicules diesel et électriques"><div class="bandeau-scroll"><img src="https://broad-moon-14ca.phmelloul.workers.dev/images/bandeau-comparatif-100km-v40.png" alt="MY EV CAR — Consommation pour 100 kilomètres : Aixam City Diesel 9,63 euros ; Ligier diesel 6,72 euros ; Astraux L6 Ultra électrique 1 euro ; Linktour Alumi Pro électrique 1 euro. Bandeau professionnel avec photos retravaillées et pictogramme de pompe à carburant." width="1916" height="512" fetchpriority="high" decoding="async"></div></section><section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Martinique • Mobilité électrique</div><h1>La liberté de rouler autrement.</h1><p>Découvrez nos modèles électriques L6e et L7e : Astraux L6 Ultra, Astraux AL7 Pro, Linktour Alumi Pro L6e et Alumi Elite+, leurs galeries photo et leurs caractéristiques.</p><a class="cta" href="#vehicules">Découvrir les véhicules <span aria-hidden="true">→</span></a></div><a aria-label="Voir la fiche et les photos de l’Astraux L6 Ultra" class="hero-photo-link" href="#astraux-pro-l6e" onclick="openAstraux()"><img alt="Astraux jaune, vue avant trois quarts" class="hero-img" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-01-jaune.webp"/></a></div></section><div class="v3-speedbar" aria-label="Les atouts MY EV CAR"><div class="wrap"><span>⚡ 100% ÉLECTRIQUE</span><span>✦ TAILLÉ POUR LA MARTINIQUE</span><span>☀ LA LIBERTÉ AU QUOTIDIEN</span><span>⚡ 100% ÉLECTRIQUE</span></div></div><section class="v3-editorial" aria-label="Les modèles en images">
+<div class="wrap"><div class="v3-intro-row"><span class="v3-mini">LA VIE EN ÉLECTRIQUE</span><h2>Ce n'est pas juste une voiture.<br><em>C'est une nouvelle façon de bouger.</em></h2><p>Quatre modèles à découvrir, des styles différents, une même envie de liberté.</p></div>
+<div class="v3-visual-grid">
+<a href="#astraux-pro-l6e" onclick="openAstraux()" class="v3-tile v3-tile-main" aria-label="Découvrir Astraux L6 Ultra"><span class="v3-tile-kicker">L6e · LE STYLE COMPACT</span><img src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-01-jaune.webp" alt="Astraux L6 Ultra jaune, vraie photo de la gamme"><span class="v3-tile-footer"><strong>ASTRAUX <i>L6 Ultra</i></strong><span>Découvrir ↗</span></span></a>
+<a href="#linktour" onclick="openLinktour()" class="v3-tile v3-tile-side" aria-label="Découvrir Linktour Alumi Elite Plus"><span class="v3-tile-kicker">L7e · LE GRAND AIR</span><img src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-exterieur-e1783072139226.webp" alt="Linktour Alumi Elite Plus, photographie de référence"><span class="v3-tile-footer"><strong>LINKTOUR <i>Alumi Elite+</i></strong><span>Découvrir ↗</span></span></a>
+<a href="#al7" onclick="openAL7()" class="v3-tile v3-tile-small" aria-label="Découvrir Astraux AL7 Pro"><span class="v3-tile-kicker">L7e · LE PLAISIR EN PLUS</span><img src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-02-gris.webp" alt="Astraux AL7 Pro, illustration gris anthracite"><span class="v3-tile-footer"><strong>ASTRAUX <i>AL7 Pro</i></strong><span>Découvrir ↗</span></span></a>
+</div></div></section>
+<section class="section" id="vehicules"><div class="wrap"><div class="head"><div><div class="eyebrow">Notre sélection</div><h2>Nos véhicules électriques L6e &amp; L7e</h2></div><p>Quatre modèles électriques L6e et L7e : galeries photo, équipements et fiches techniques.</p></div><div class="cards">
+<article class="model"><button aria-label="Ouvrir la fiche Astraux AL7 Pro L7e" class="card-photo-link" onclick="openAL7()" type="button"><img alt="Astraux, carrosserie commune à la gamme AL6/AL7, photo d’illustration" class="photo" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-02-gris.webp"/></button><div class="info"><span class="pill">Catégorie L7e • AL7 Pro</span><h3>Astraux AL7 Pro</h3><p>90 km/h · jusqu’à 150 km · batterie LFP 10 kWh · ABS, airbag et climatisation.</p><p class="charge-teaser"><strong>Recharge : environ 1,60 €*</strong><small>* Batterie 10 kWh · heures creuses 0,1589 €/kWh · hors pertes</small></p><button class="action" onclick="openAL7()" type="button">Voir le véhicule et sa fiche →</button></div></article><article class="model"><button aria-label="Ouvrir la fiche de l’Astraux L6 Ultra" class="card-photo-link" onclick="openAstraux()" type="button"><img alt="Astraux L6 Ultra jaune" class="photo" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-01-jaune.webp"/></button><div class="info"><span class="pill">Catégorie L6e</span><h3>Astraux L6 Ultra</h3><p>Découvrez les vues extérieures, les couleurs et l'habitacle.</p><p class="charge-teaser"><strong>Recharge : environ 1,60 €*</strong><small>* Batterie 10 kWh · heures creuses 0,1589 €/kWh · hors pertes</small></p><button class="action" onclick="openAstraux()">Voir le véhicule et ses photos →</button></div></article>
+<article class="model"><button aria-label="Ouvrir la fiche Linktour Alumi Elite Plus" class="card-photo-link" onclick="openLinktour()" type="button"><img alt="Linktour Alumi Elite, visuel du constructeur" class="photo" loading="lazy" onerror="this.alt='Visuel Linktour indisponible';this.style.objectFit='contain'" src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-exterieur-e1783072139226.webp"/></button><div class="info"><span class="pill">Catégorie L7e • 2 places</span><h3>Linktour Alumi Elite+</h3><p>90 km/h · jusqu’à 180 km WMTC · climatisation et connectivité.</p><button class="action" onclick="openLinktour()">Voir le véhicule et ses détails →</button></div></article><article class="model"><button aria-label="Ouvrir la fiche Linktour Alumi Pro L6e" class="card-photo-link" onclick="openAlumiPro()" type="button"><img alt="Linktour Alumi Pro L6e — vue de profil Moon White" class="photo" loading="lazy" src="https://linktour.be/wp-content/uploads/2026/08/Alumi_moon-white2.png"/></button><div class="info"><span class="pill">Catégorie L6e • Finition Pro</span><h3>Linktour Alumi Pro</h3><p>45 km/h · 120 km WMTC · batterie LFP 7,2 kWh · climatisation, CarPlay et écran tactile 10,25 pouces.</p><p class="charge-teaser"><strong>Recharge : environ 1,14 €*</strong><small>* 7,2 kWh × 0,1589 €/kWh, hors pertes · estimation au tarif communiqué</small></p><button class="action" onclick="openAlumiPro()" type="button">Voir les 16 photos et la fiche →</button></div></article></div></div></section>
+<section class="section" id="conseils" aria-labelledby="conseils-title">
+  <div class="wrap">
+    <div class="conseils-intro">
+      <div><div class="eyebrow">MY EV CAR • Inspirations</div><h2 id="conseils-title">Conseils &amp; actualités</h2></div>
+      <p>Découvrir la mobilité électrique autrement : nos guides, nos idées et nos conseils pratiques. De nouveaux sujets viendront compléter cette collection.</p>
+    </div>
+    <div class="conseils-grid" aria-label="Nos articles">
+      <a class="conseil-card" href="#article-premiers-trajets" onclick="openJeunesArticle()" aria-label="Lire l’article : L’indépendance commence au coin de la rue">
+        <img src="https://broad-moon-14ca.phmelloul.workers.dev/images/alumi-article-1-photo-reelle.webp" alt="Un père et un adolescent antillais à côté d’une véritable Linktour Alumi blanche, en Martinique" loading="lazy" width="1050" height="512" class="alumi-real-photo"/>
+        <div class="conseil-body">
+          <div class="conseil-label">Dès 14 ans • Conseils</div>
+          <h3>L’indépendance commence au coin de la rue</h3>
+          <p>Jeunes conducteurs, parents, sécurité et liberté : comment bien préparer les premiers trajets en voiture électrique L6e ?</p>
+          <span class="conseil-cta">Lire l’article <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="conseil-card" href="#article-convaincre-parents" onclick="openParentsArticle()" aria-label="Lire l’article : Comment convaincre tes parents de choisir une Linktour Alumi ?">
+        <img src="https://broad-moon-14ca.phmelloul.workers.dev/images/alumi-article-2-antilles.png" alt="Une mère antillaise et son adolescent discutent devant une vraie Linktour Alumi dans un décor tropical" loading="lazy" width="1000" height="667" referrerpolicy="no-referrer"/>
+        <div class="conseil-body">
+          <div class="conseil-label">Jeunes conducteurs • Famille</div>
+          <h3>Comment convaincre tes parents de choisir une Linktour Alumi ?</h3>
+          <p>Cinq arguments concrets pour leur parler de sécurité, d’autonomie et de budget — et préparer une décision ensemble.</p>
+          <span class="conseil-cta">Lire l’article <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="conseil-card" href="#article-securite-linktour" onclick="openSecuriteArticle()" aria-label="Lire l’article : Linktour Alumi, sécurité et bons réflexes">
+        <img src="https://broad-moon-14ca.phmelloul.workers.dev/images/alumi-article-3-securite-photo-reelle.webp" alt="Deux Martiniquaises près d’une Linktour Alumi vert clair, véritable visuel du véhicule" class="alumi-real-photo" loading="lazy" width="1050" height="512"/>
+        <div class="conseil-body">
+          <div class="conseil-label">Sécurité • Conduite électrique</div>
+          <h3>Linktour Alumi : les équipements et les bons réflexes pour rouler sereinement</h3>
+          <p>Habitacle, visibilité, formation AM et conduite responsable : les points clés pour prendre la route en confiance.</p>
+          <span class="conseil-cta">Lire l’article <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="contact"><div class="wrap"><div class="head"><div><div class="eyebrow">Nous contacter</div><h2>Une question sur un modèle ?</h2></div><p>Les prix, disponibilités et équipements définitifs seront communiqués sur demande.</p></div><p>Coordonnées commerciales à ajouter prochainement.</p></div></section>
+</main>
+<main aria-label="Fiche Astraux L6 Ultra" class="detail" id="detail"><div class="wrap"><button class="back" onclick="showHome()">← Retour aux véhicules</button><div class="detail-header"><div class="eyebrow">MY EV CAR • Catégorie L6e</div><h1>Astraux <span style="color:#42816d">L6 Ultra</span></h1><p>Une présentation complète, photo par photo.</p></div><div class="detail-layout"><div class="gallery"><div class="stage"><img alt="Astraux jaune — vue trois quarts avant" id="stageImg" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-01-jaune.webp"/><button aria-label="Photo précédente" class="photo-nav prev" onclick="shift(-1)">‹</button><button aria-label="Photo suivante" class="photo-nav next" onclick="shift(1)">›</button><div class="photo-count" id="counter">1 / 9</div></div><div class="thumbs"><button aria-label="Afficher photo 1 : Jaune — vue trois quarts avant" class="thumb selected" data-index="0" type="button"><img alt="Jaune — vue trois quarts avant" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-01-jaune.webp"/></button><button aria-label="Afficher photo 2 : Gris anthracite — vue trois quarts avant" class="thumb" data-index="1" type="button"><img alt="Gris anthracite — vue trois quarts avant" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-02-gris.webp"/></button><button aria-label="Afficher photo 3 : Astraux jaune — 180 km et recharge 3,3 kW" class="thumb" data-index="2" type="button"><img alt="Astraux jaune — 180 km et recharge 3,3 kW" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-3-180km-3-3kw.webp"/></button><button aria-label="Afficher photo 4 : Astraux jaune — Bluetooth et commande vocale" class="thumb" data-index="3" type="button"><img alt="Astraux jaune — Bluetooth et commande vocale" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-4-bluetooth-vocal.jpg"/></button><button aria-label="Afficher photo 5 : Astraux jaune — portes ouvertes" class="thumb" data-index="4" type="button"><img alt="Astraux jaune — portes ouvertes" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-5-portes-ouvertes.jpg"/></button><button aria-label="Afficher photo 6 : Astraux jaune — visuel 14+" class="thumb" data-index="5" type="button"><img alt="Astraux jaune — visuel 14+" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-6-14plus.jpg"/></button><button aria-label="Afficher photo 7 : Astraux gris et orange — présentation" class="thumb" data-index="6" type="button"><img alt="Astraux gris et orange — présentation" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-7-gris-orange.jpg"/></button><button aria-label="Afficher photo 8 : Habitacle — sièges et volant" class="thumb" data-index="7" type="button"><img alt="Habitacle — sièges et volant" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-08-interieur.webp"/></button><button aria-label="Afficher photo 9 : Habitacle — tableau de bord" class="thumb" data-index="8" type="button"><img alt="Habitacle — tableau de bord" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-09-tableau.webp"/></button></div><p class="muted" id="caption" style="font-size:.88rem">Jaune — vue trois quarts avant</p><p class="note">Certaines images sont des publicités de démonstration en anglais et ne constituent pas une offre commerciale locale. Les finitions et coloris sont à confirmer.</p></div><aside class="panel"><div class="opts-top"><button aria-controls="optionsPanel" aria-expanded="false" class="options-button" id="optionsToggle" onclick="toggleOptions()" type="button">Options et équipements <span id="optionsChevron">＋</span></button><div class="options-panel" hidden="" id="optionsPanel"><h3>Équipements de l’Astraux L6 Ultra</h3><ul><li>Direction assistée</li><li>Climatisation</li><li>Apple CarPlay et Android Auto</li><li>ABS</li><li>Récupération d’énergie</li><li>Fonctions intelligentes via application mobile : commande à distance du véhicule et de la climatisation, localisation GPS</li><li>Caméra 360°</li><li>Démarrage sans clé</li><li>Écran tactile</li><li>Sièges premium</li><li>Kit mains libres Bluetooth</li><li>Recharge du téléphone par induction</li><li>Prise USB-C</li><li>Vitres électriques</li><li>Phares à LED automatiques</li><li>Toit vitré panoramique</li><li>Antenne 4G</li><li>Barres de toit</li></ul><p class="note">Équipements annoncés pour la finition Ultra, à confirmer sur la brochure définitive.</p></div></div><div class="eyebrow">Dimensions du modèle</div><h2>Compacte à l'extérieur.<br/>Astucieuse à l'intérieur.</h2><p>Découvrez ses proportions et parcourez les vues de l'habitacle dans la galerie.</p><div class="dims"><div class="metric"><strong>2,317 m</strong><small>Longueur</small></div><div class="metric"><strong>1,295 m</strong><small>Largeur</small></div><div class="metric"><strong>1,720 m</strong><small>Hauteur</small></div></div><p class="note">Dimensions indiquées pour référence, à confirmer sur la fiche technique de la finition L6 Ultra.</p><div class="detail-extra"><div class="tagline">Prix : sur demande</div><p>Découvrez les équipements et les caractéristiques de cette finition.</p><button class="info-btn" onclick="showHome();location.hash='contact'">Demander des informations</button></div></aside></div><section aria-label="Atouts techniques" class="argument-section"><div class="eyebrow">Technologie &amp; avantages</div><h2>L’Astraux L6 Ultra en détail</h2><div class="argument-grid"><article><h3>Jusqu’à 180 km d’autonomie</h3><p>Autonomie annoncée, variable selon l’utilisation et les conditions de conduite.</p></article><article><h3>Recharge : environ 1,60 €*</h3><p>Estimation pour une batterie 10 kWh à 0,1589 €/kWh en heures creuses : 1,589 €, arrondi à 1,60 €, hors pertes de recharge.</p></article><article><h3>Moteur PMSM haute efficacité</h3><p>Moteur électrique synchrone à aimants permanents conçu pour un rendement énergétique élevé.</p></article><article><h3>Nouvelle batterie lithium-fer-phosphate (LFP)</h3><p>Technologie reconnue pour sa durabilité et sa stabilité thermique.</p></article><article><h3>Carrosserie monocoque</h3><p>Structure intégrée favorisant la rigidité de l’ensemble.</p></article><article><h3>Suspension MacPherson</h3><p>Architecture de suspension favorisant le confort et la tenue de route.</p></article></div><div class="charge-box"><h3>Recharge complète de l’Astraux L6 Ultra : environ 1,60 €*</h3><div class="charge-metrics"><div><strong>≈ 1,60 €</strong><span>Coût théorique pour 10 kWh × 0,1589 €/kWh, arrondi, hors pertes</span></div><div><strong>≈ 1,75 à 1,83 €</strong><span>Estimation avec 10 à 15 % d’énergie supplémentaire prélevée à la prise</span></div><div><strong>10 kWh LFP</strong><span>Capacité annoncée par Astraux pour l’AL6 Ultra</span></div></div><p class="note">* Calcul indicatif au tarif heures creuses communiqué de 0,1589 €/kWh. Le coût réel dépend du tarif applicable, du niveau de batterie et des pertes à la recharge.</p></div><p class="note">Caractéristiques et coûts annoncés à confirmer avant toute offre commerciale.</p></section><section aria-label="Illustrations techniques de sécurité" class="safety-section"><div class="safety-heading"><div class="eyebrow">Découvrir le véhicule</div><h2>Structure et sécurité</h2><p>Deux illustrations techniques fournies par le fabricant. Les équipements exacts de la finition L6 Ultra restent à confirmer.</p></div><figure class="safety-figure"><img alt="Protection contre les chocs — schéma technique Astraux" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/new6.jpeg"/><figcaption>Protection contre les chocs</figcaption></figure><figure class="safety-figure"><img alt="Structure de sécurité — schéma technique Astraux" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/new7.jpeg"/><figcaption>Structure de sécurité</figcaption></figure></section></div></main>
+<main aria-label="Fiche Linktour Alumi Elite Plus L7e" class="detail" id="linktourDetail"><div class="wrap"><button class="back" onclick="showHome();location.hash='vehicules'">← Retour aux véhicules</button><div class="detail-header"><div class="eyebrow">MY EV CAR • Catégorie L7e • 2 places</div><h1>Linktour <span style="color:#42816d">Alumi Elite+</span></h1><p>100 % électrique • La version haut de gamme de l’Alumi L7e.</p></div><div class="detail-layout"><div class="gallery"><div class="stage"><img alt="Linktour Alumi Elite extérieur" id="linkStageImg" src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-exterieur-e1783072139226.webp"/><button aria-label="Photo Linktour précédente" class="photo-nav prev" onclick="linkShift(-1)" type="button">‹</button><button aria-label="Photo Linktour suivante" class="photo-nav next" onclick="linkShift(1)" type="button">›</button><div class="photo-count" id="linkCounter">1 / 14</div></div><div class="thumbs" id="linkThumbs"><button aria-label="Afficher photo 1 : Extérieur — blanc, vue 3/4 face à la mer" class="thumb selected" data-link-index="0" type="button"><img alt="Extérieur — blanc, vue 3/4 face à la mer" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-exterieur-e1783072139226.webp"/></button><button aria-label="Afficher photo 2 : Moon White — blanc lunaire" class="thumb" data-link-index="1" type="button"><img alt="Moon White — blanc lunaire" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/08/Alumi-Elite_moon-white.png"/></button><button aria-label="Afficher photo 3 : Sprout Green — vert menthe" class="thumb" data-link-index="2" type="button"><img alt="Sprout Green — vert menthe" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/08/Alumi-elite_sprout-green2.png"/></button><button aria-label="Afficher photo 4 : Rock Grey — gris roche" class="thumb" data-link-index="3" type="button"><img alt="Rock Grey — gris roche" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/08/Alumi_elite_rock-grey2.png"/></button><button aria-label="Afficher photo 5 : Starlit Black — noir étoilé" class="thumb" data-link-index="4" type="button"><img alt="Starlit Black — noir étoilé" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/08/Alumi-elite_moon-starlit-black2.png"/></button><button aria-label="Afficher photo 6 : Vue de profil — Moon White" class="thumb" data-link-index="5" type="button"><img alt="Vue de profil — Moon White" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite.png"/></button><button aria-label="Afficher photo 7 : Détail arrière — logo Linktour Elite" class="thumb" data-link-index="6" type="button"><img alt="Détail arrière — logo Linktour Elite" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/07/1201.4-e1783072104691.png"/></button><button aria-label="Afficher photo 8 : Vert menthe — photo réelle de trois quarts avant" class="thumb" data-link-index="7" type="button"><img alt="Vert menthe — photo réelle de trois quarts avant" loading="lazy" referrerpolicy="no-referrer" src="https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img0MmZ5czdydnNyMDEtQVVUT1ZJVFJPIiwidyI6W3siZm4iOiJxN216NTNiaWZwemstQVVUT1ZJVFJPIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.QlyaoL29gMy7OhzraW_qmqYdgKMZhk8ld4UTm3Zd3wY/image%3Bs%3D5120x0%3Bq%3D80"/></button><button aria-label="Afficher photo 9 : Vert menthe — photo réelle de trois quarts arrière" class="thumb" data-link-index="8" type="button"><img alt="Vert menthe — photo réelle de trois quarts arrière" loading="lazy" referrerpolicy="no-referrer" src="https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im11NDd5d2E1OGNrZy1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJhIjoiMCIsInAiOiIxMCwtMTAifV19.P2Miz09XUckiiU1GvAtLkXEPS8DIGlbTI-MJmY01m0c/image%3Bs%3D5120x0%3Bq%3D100"/></button><button aria-label="Afficher photo 10 : Habitacle — vue d’ensemble et rangements" class="thumb" data-link-index="9" type="button"><img alt="Habitacle — vue d’ensemble et rangements" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-elite-Multi-Function-Storage.jpg"/></button><button aria-label="Afficher photo 11 : Poste de conduite — volant et écran tactile" class="thumb" data-link-index="10" type="button"><img alt="Poste de conduite — volant et écran tactile" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-Multifunction-Touchscreen-e1783073079654.jpg"/></button><button aria-label="Afficher photo 12 : Tableau de bord — écran, CarPlay et climatisation" class="thumb" data-link-index="11" type="button"><img alt="Tableau de bord — écran, CarPlay et climatisation" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-elite-A_C-e1783073145949.jpg"/></button><button aria-label="Afficher photo 13 : Sellerie — sièges sport bicolores" class="thumb" data-link-index="12" type="button"><img alt="Sellerie — sièges sport bicolores" loading="lazy" referrerpolicy="no-referrer" src="https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-Sports-Seats-e1783073223413.jpg"/></button><button aria-label="Afficher photo 14 : Coffre — deux valises" class="thumb" data-link-index="13" type="button"><img alt="Coffre — deux valises" loading="lazy" referrerpolicy="no-referrer" src="https://broad-moon-14ca.phmelloul.workers.dev/images/linktour-elite-coffre-nettoye.png"/></button></div><p class="muted" id="linkCaption" style="font-size:.88rem">Extérieur — blanc, vue 3/4 face à la mer</p><p class="note">Galerie Alumi Elite / Elite+ : 4 coloris, détails extérieurs et vues de l’habitacle. Visuels de gamme non contractuels, pouvant montrer différentes finitions. Photos issues de Linktour Luxembourg et de petites annonces ; affichage dépendant de sites tiers, droits de réutilisation commerciale à obtenir. <a href="https://linktour.lu/modeles/alumi-elite/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Voir les photos sur le site Linktour</a>.</p></div><aside class="panel"><div class="opts-top"><button aria-controls="linkOptionsPanel" aria-expanded="false" class="options-button" id="linkOptionsToggle" onclick="toggleLinkOptions()" type="button">Options et équipements <span id="linkOptionsChevron">＋</span></button><div class="options-panel" hidden="" id="linkOptionsPanel"><h3>Équipements annoncés pour Alumi Elite+</h3><ul><li>Direction assistée électrique (EPS)</li><li>ABS et répartition électronique du freinage (EBD)</li><li>Assistance au freinage et aide au démarrage en côte</li><li>Caméra de recul</li><li>Climatisation chaud / froid</li><li>Écran tactile central 10,25 pouces</li><li>Compteur numérique 5 pouces</li><li>Apple CarPlay et Android Auto</li><li>Bluetooth mains libres</li><li>Port USB-C 60 W</li><li>Volant multifonction</li><li>Sellerie en cuir selon configuration</li><li>Accès et démarrage sans clé</li><li>Rétroviseurs électriques</li><li>Vitres électriques</li><li>Phares LED</li><li>Application mobile connectée</li><li>Toit panoramique (selon configuration)</li></ul><p class="note">Équipements à confirmer selon pays, année et version importée.</p></div></div><div class="eyebrow">Dimensions du modèle</div><h2>Compacte en ville.<br/>Équipée pour voyager.</h2><p>Carrosserie aluminium, deux places, motorisation 100 % électrique et batterie LFP.</p><div class="dims"><div class="metric"><strong>2,685 m</strong><small>Longueur</small></div><div class="metric"><strong>1,500 m</strong><small>Largeur</small></div><div class="metric"><strong>1,590 m</strong><small>Hauteur</small></div></div><div class="detail-extra"><div class="tagline">Prix Martinique : sur demande</div><p>Disponibilité et tarif local à confirmer avant commande.</p><button class="info-btn" onclick="showHome();location.hash='contact'">Demander des informations</button></div></aside></div><section aria-label="Caractéristiques techniques Linktour" class="argument-section"><div class="eyebrow">Fiche technique constructeur</div><h2>Alumi Elite+ L7e en détail</h2><div class="argument-grid"><article><h3>90 km/h</h3><p>Vitesse maximale annoncée, catégorie L7e.</p></article><article><h3>180 km WMTC</h3><p>Autonomie homologuée annoncée, variable selon conditions d’utilisation.</p></article><article><h3>12,96 kWh LFP</h3><p>Batterie lithium-fer-phosphate, tension nominale 96 V.</p></article><article><h3>10 kW / 23 kW</h3><p>Puissance nominale / puissance maximale du moteur synchrone.</p></article><article><h3>95 Nm</h3><p>Couple maximal annoncé ; modes Normal et Sport.</p></article><article><h3>Recharge AC 3,3 kW</h3><p>Prise Type 2 ; temps annoncé d’environ 4 h 30.</p></article><article><h3>Transmission arrière</h3><p>Propulsion ; assistance à la récupération d’énergie au freinage.</p></article><article><h3>Empattement 1,80 m</h3><p>Garde au sol annoncée 130 mm ; rayon de braquage environ 4,5 m.</p></article><article><h3>Poids / PTAC</h3><p>Masse à vide annoncée 645 kg ; masse maximale admissible 820 kg.</p></article></div><p class="note">Données issues des fiches constructeur Linktour et du manuel Alumi. <a href="https://www.linktour-auto.com/en/product/detail" rel="noopener noreferrer" style="text-decoration:underline" target="_blank">Voir les caractéristiques officielles</a>.</p></section></div></main>
+<main class="detail" id="articleJeunesDetail" aria-label="Conseils MY EV CAR : premiers trajets en voiture électrique">
+  <div class="wrap">
+    <button class="back article-return" type="button" onclick="backToConseils()">← Retour aux conseils</button>
+<section class="pro-ado-editorial" aria-labelledby="pro-ado-title">
+  <div class="pro-ado-lead">
+    <figure>
+      <img src="https://broad-moon-14ca.phmelloul.workers.dev/images/alumi-article-1-photo-reelle.webp" alt="Un père et un adolescent antillais à côté d’une Linktour Alumi blanche" loading="lazy" width="1050" height="512" class="alumi-real-photo"/>
+      <figcaption>Montage MY EV CAR : visuel du modèle Linktour Alumi conservé, décor et personnages d’illustration antillais. Visuel non contractuel.</figcaption>
+    </figure>
+    <div>
+      <div class="eyebrow">Linktour Alumi Pro • Premiers trajets</div>
+      <h2 id="pro-ado-title">L’indépendance commence au coin de la rue.</h2>
+      <p>Rejoindre son cours, partir à un entraînement ou retrouver ses proches : avec une voiture électrique compacte, les premiers déplacements peuvent devenir plus simples à organiser. L’Alumi Pro L6e associe le plaisir d’une citadine au format adapté aux trajets de proximité.</p>
+      <p>Pour les parents, l’essentiel reste de choisir un véhicule adapté au quotidien et d’accompagner les débuts au volant. Pour les jeunes, c’est aussi l’occasion de gagner progressivement en autonomie, sans renoncer au confort ni au style.</p>
+      <div class="pro-ado-keyfacts"><span>Dès 14 ans avec permis AM</span><span>L6e : 45 km/h</span><span>100 % électrique</span></div>
+    </div>
+  </div>
+  <h3 class="pro-ado-heading">Un choix qui se prépare ensemble</h3>
+  <div class="pro-ado-tiles">
+    <article><h4>Un cadre rassurant</h4><p>Quatre roues, un habitacle fermé et des ceintures pour les deux occupants : des éléments à considérer, avec les règles de circulation et les limites propres aux quadricycles légers.</p></article>
+    <article><h4>Un budget à regarder dans son ensemble</h4><p>L’électricité et l’entretien courant peuvent faciliter la maîtrise des dépenses. Pensez aussi à l’assurance, à la recharge, à la formation et aux conditions de financement avant de choisir.</p></article>
+    <article><h4>Un style personnel</h4><p>Silhouette contemporaine, teintes disponibles selon configuration et format facile à stationner : une petite voiture qui trouve sa place dans les déplacements de tous les jours.</p></article>
+    <article><h4>Le confort connecté</h4><p>Sur la finition Pro présentée : écran tactile 10,25 pouces, Bluetooth et connectivité smartphone annoncée. La dotation exacte est à vérifier sur le véhicule proposé.</p></article>
+    <article><h4>Découvrir la route progressivement</h4><p>La catégorie L6e est limitée à 45 km/h. Un essai permet d’évaluer le poste de conduite, les manœuvres et l’usage envisagé, notamment en zone urbaine.</p></article>
+    <article><h4>Bien préparer les premiers kilomètres</h4><p>En France, la conduite est possible dès 14 ans avec le permis AM ou un titre admis. Formation, assurance et bonnes habitudes de conduite sont indispensables avant de prendre la route.</p></article>
+  </div>
+  <div class="pro-ado-end">
+    <p><strong>Envie de découvrir l’Alumi Pro ?</strong> Consultez sa galerie et sa fiche technique, puis contactez MY EV CAR pour discuter de la configuration adaptée à vos besoins. <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2890" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Conditions officielles du permis AM</a>.</p>
+    <button type="button" onclick="showHome();location.hash='contact'">Demander des informations</button>
+  </div>
+</section>
+    <div style="padding:20px 0 8px;text-align:center"><button class="info-btn" type="button" onclick="openAlumiPro()">Découvrir la Linktour Alumi Pro L6e →</button></div>
+  </div>
+</main>
+
+<main class="detail" id="articleParentsDetail" aria-label="Conseils MY EV CAR : convaincre ses parents de choisir une Linktour Alumi">
+  <div class="wrap">
+    <button class="back article-return" type="button" onclick="backToConseils()">← Retour aux conseils</button>
+    <section class="pro-ado-editorial" aria-labelledby="parents-title">
+      <div class="pro-ado-lead">
+        <figure>
+          <img src="https://broad-moon-14ca.phmelloul.workers.dev/images/alumi-article-2-antilles.png" alt="Une mère antillaise et son adolescent discutent près d’une vraie Linktour Alumi" width="1000" height="667" referrerpolicy="no-referrer"/>
+          <figcaption>Photo d’illustration dans une ambiance antillaise avec une vraie Linktour Alumi.</figcaption>
+        </figure>
+        <div>
+          <div class="eyebrow">MY EV CAR • Jeunes conducteurs</div>
+          <h2 id="parents-title">Comment convaincre tes parents de choisir une Linktour Alumi ?</h2>
+          <p>Tu rêves d’avoir ta propre voiture pour tes déplacements ? Avant de demander une Linktour Alumi, prépare des arguments qui répondent aux questions de tes parents : est-ce adapté à ton âge, utile au quotidien et raisonnable pour le budget familial ?</p>
+          <p>Voici cinq sujets à aborder calmement, avec des exemples précis. Le plus convaincant, c’est de montrer que tu prends cette décision au sérieux.</p>
+          <div class="pro-ado-keyfacts"><span>Conduite L6e dès 14 ans sous conditions</span><span>45 km/h maximum</span><span>100 % électrique</span></div>
+        </div>
+      </div>
+      <h3 class="pro-ado-heading">Cinq arguments pour en discuter</h3>
+      <div class="pro-ado-tiles">
+        <article>
+          <h4>1. La sécurité, d’abord</h4>
+          <p>Une Alumi possède quatre roues, un habitacle fermé et des ceintures de sécurité. Ce sont des points à examiner avec tes parents, notamment si vous hésitez avec un deux-roues. Ils doivent aussi connaître les limites d’un quadricycle léger et les règles de circulation qui s’y appliquent.</p>
+        </article>
+        <article>
+          <h4>2. Plus d’autonomie pour toi, moins de trajets pour eux</h4>
+          <p>Pour aller au lycée, à une activité sportive ou chez tes proches, tu pourrais organiser certains trajets sans dépendre systématiquement des adultes. Propose des itinéraires précis, adaptés à une vitesse maximale de 45 km/h, et explique comment cela simplifierait l’emploi du temps familial.</p>
+        </article>
+        <article>
+          <h4>3. Une première expérience de la route</h4>
+          <p>En conduisant un L6e, tu peux apprendre progressivement à anticiper, respecter les priorités, te garer et rester attentif aux autres usagers. C’est une expérience utile pour acquérir de bonnes habitudes, même si elle ne remplace ni la formation AM ni l’apprentissage futur du permis B.</p>
+        </article>
+        <article>
+          <h4>4. Un budget à préparer intelligemment</h4>
+          <p>La motorisation électrique permet d’éviter les dépenses d’essence et peut réduire certains frais d’entretien. Pour être crédible, présente aussi les coûts d’achat ou de location, d’assurance, de recharge, de réparations et de formation. Ne promets pas une valeur de revente ou une aide financière sans vérification.</p>
+        </article>
+        <article>
+          <h4>5. Faire preuve de responsabilité</h4>
+          <p>Propose un essai en famille, compare les équipements et renseigne-toi sur le permis AM, les conditions d’assurance et les possibilités de financement. Arriver avec un vrai petit dossier montre que tu ne cherches pas seulement une voiture : tu as réfléchi à ce qu’elle implique.</p>
+        </article>
+        <article>
+          <h4>Le petit plus : participe au projet</h4>
+          <p>Pourquoi ne pas contribuer à certaines dépenses avec tes économies, prendre en charge le nettoyage ou suivre la recharge ? Un accord clair sur l’utilisation et l’entretien de l’Alumi peut aider tes parents à te faire confiance.</p>
+        </article>
+      </div>
+      <div class="pro-ado-end">
+        <p><strong>Prêt à en parler ensemble ?</strong> Consulte la fiche de l’Alumi Pro L6e, prépare tes questions et vérifie les conditions de conduite auprès d’un professionnel. <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2890" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">En savoir plus sur le permis AM</a>.</p>
+        <button type="button" onclick="openAlumiPro()">Voir l’Alumi Pro</button>
+      </div>
+      <p class="article-source-note" style="font-size:.8rem;color:#64766d;margin:15px 0 5px">Article rédigé pour MY EV CAR à partir des questions abordées dans le <a href="https://www.linktour.fr/newsdetail/175" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">guide Linktour France</a>. Texte rédigé pour MY EV CAR ; photo publiée par Linktour France, droits réservés.</p>
+    </section>
+  </div>
+</main>
+
+<main class="detail" id="articleSecuriteDetail" aria-label="Conseils MY EV CAR : sécurité Linktour Alumi">
+  <div class="wrap">
+    <button class="back article-return" type="button" onclick="backToConseils()">← Retour aux conseils</button>
+    <section class="pro-ado-editorial" aria-labelledby="securite-title">
+      <div class="pro-ado-lead">
+        <figure>
+          <img src="https://broad-moon-14ca.phmelloul.workers.dev/images/alumi-article-3-securite-photo-reelle.webp" alt="Deux personnes discutent devant une véritable Linktour Alumi vert clair, décor tropical" loading="lazy" width="1050" height="512" class="alumi-real-photo"/>
+          <figcaption>Montage MY EV CAR : véhicule issu d’un visuel produit de la Linktour Alumi, décor antillais illustratif. Visuel non contractuel.</figcaption>
+        </figure>
+        <div>
+          <div class="eyebrow">MY EV CAR • Sécurité et mobilité</div>
+          <h2 id="securite-title">Linktour Alumi : la sécurité au cœur de chaque déplacement</h2>
+          <p>Quand on découvre la route, la prudence compte autant que le plaisir de conduire. La Linktour Alumi associe une carrosserie fermée, des ceintures de sécurité et des équipements pensés pour accompagner les trajets du quotidien.</p>
+          <p>Pour les jeunes comme pour les adultes, la meilleure protection reste l’association d’un véhicule adapté, d’une formation sérieuse et de bons réflexes au volant.</p>
+          <div class="pro-ado-keyfacts"><span>Alumi L6e : 45 km/h</span><span>Permis AM dès 14 ans selon réglementation</span><span>Ceintures et habitacle fermé</span></div>
+        </div>
+      </div>
+      <h3 class="pro-ado-heading">Cinq points essentiels à connaître</h3>
+      <div class="pro-ado-tiles">
+        <article>
+          <h4>1. Un habitacle pour mieux se protéger</h4>
+          <p>La Linktour Alumi dispose de quatre roues, de ceintures et d’une structure fermée. Ces éléments offrent un environnement différent de celui d’un deux-roues. Ils ne dispensent jamais d’attacher sa ceinture ni de rester vigilant face aux autres usagers.</p>
+        </article>
+        <article>
+          <h4>2. Une vitesse adaptée et une bonne visibilité</h4>
+          <p>La version L6e est limitée à 45 km/h. Des surfaces vitrées généreuses et des éclairages LED, selon la version, participent à la visibilité. Cela n’élimine pas les risques : distances de sécurité et adaptation à la météo restent essentielles.</p>
+        </article>
+        <article>
+          <h4>3. La formation avant les premiers trajets</h4>
+          <p>En règle générale, la conduite d’un L6e est accessible dès 14 ans avec le permis AM (formation pratique de 8 heures), sous réserve des exceptions légales. Pour une Alumi Elite L7e, un permis B1 ou B adapté est nécessaire. Mieux vaut se former avant de prendre la route seul.</p>
+        </article>
+        <article>
+          <h4>4. Une structure en aluminium</h4>
+          <p>La carrosserie et le châssis en aluminium sont au cœur de la conception Linktour : ils recherchent un compromis entre légèreté et rigidité. Les performances exactes en cas de choc ne doivent pas être supposées sans résultats d’essais officiels.</p>
+        </article>
+        <article>
+          <h4>5. Freinage, anticipation et attention</h4>
+          <p>Un freinage entretenu, des pneus adaptés, un éclairage efficace et, selon l’équipement, un signal sonore pour les piétons sont des aides utiles. Mais aucune technologie ne remplace l’observation, l’anticipation et le respect des priorités.</p>
+        </article>
+      </div>
+      <div class="pro-ado-end">
+        <p><strong>Avant de choisir :</strong> découvrez le véhicule en vrai, vérifiez les équipements de la finition vendue en Martinique et faites un essai encadré avec un professionnel lorsque cela est possible.</p>
+        <button type="button" onclick="openAlumiPro()">Découvrir l’Alumi Pro L6e →</button>
+      </div>
+      <p class="note" style="margin:18px 0 8px">Cet article MY EV CAR s’inspire des thèmes du <a href="https://www.linktour.fr/newsdetail/163" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">dossier sécurité Linktour France</a>, avec une rédaction nouvelle. Les chiffres de risque d’accident, résultats de crash-test et équipements précis ne sont pas présumés sans justificatifs.</p>
+    </section>
+  </div>
+</main>
+<footer class="footer"><div class="wrap footrow"><div class="brand">MY <span>EV</span> CAR</div><p>Voitures électriques • Martinique<br/>Informations non contractuelles, à confirmer avant commande.</p></div></footer>
+<main aria-label="Fiche Astraux AL7 Pro L7e" class="detail" id="al7Detail">
+<div class="wrap">
+<button class="back" onclick="showHome();location.hash='vehicules'" type="button">← Retour aux véhicules</button>
+<div class="detail-header"><div class="eyebrow">MY EV CAR • ASTRAUX • Catégorie L7e • 2 places</div><h1>Astraux <span style="color:#42816d">AL7 Pro</span></h1><p>100 % électrique • 90 km/h • Batterie LFP 10 kWh • Présentation du modèle en gris anthracite.</p></div>
+<div class="detail-layout">
+<div class="gallery">
+<div class="stage"><img alt="Astraux AL7 Pro gris, vue trois quarts avant — illustration de la gamme" id="al7StageImg" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-02-gris.webp"/><button aria-label="Photo précédente" class="photo-nav prev" onclick="al7Shift(-1)" type="button">‹</button><button aria-label="Photo suivante" class="photo-nav next" onclick="al7Shift(1)" type="button">›</button><div class="photo-count" id="al7Counter">1 / 6</div></div>
+<div class="thumbs" id="al7Thumbs">
+<button aria-label="Afficher Astraux gris vue avant" class="thumb selected" data-al7-index="0" type="button"><img alt="Astraux gris vue avant" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-02-gris.webp"/></button>
+<button aria-label="Afficher Astraux gris vue arrière" class="thumb" data-al7-index="1" type="button"><img alt="Astraux gris vue arrière" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/astra-06-gris-arriere.webp"/></button>
+<button aria-label="Afficher intérieur Astraux avec écran rond" class="thumb" data-al7-index="2" type="button"><img alt="Intérieur Astraux — écran tactile rond" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/al7-interieur-officiel-rond-1.png"/></button>
+<button aria-label="Afficher habitacle Astraux avec écran rond" class="thumb" data-al7-index="3" type="button"><img alt="Habitacle Astraux — vue intérieure avec écran rond" loading="lazy" src="https://broad-moon-14ca.phmelloul.workers.dev/images/al7-interieur-officiel-rond-2.png"/></button>
+<button aria-label="Afficher habitacle Astraux sièges orange et noir" class="thumb" data-al7-index="4" type="button"><img alt="Habitacle Astraux — sièges noir et orange" loading="lazy" referrerpolicy="no-referrer" src="https://cdn.dmove.it/images/47878/large_IMG_8788.jpg"/></button>
+<button aria-label="Afficher tableau de bord Astraux noir et orange" class="thumb" data-al7-index="5" type="button"><img alt="Tableau de bord Astraux — noir et orange" loading="lazy" referrerpolicy="no-referrer" src="https://cdn.dmove.it/images/47877/large_IMG_8787.jpg"/></button>
+</div>
+<p class="muted" id="al7Caption" style="font-size:.88rem">Astraux gris — vue trois quarts avant</p>
+<p class="note">Visuels de la gamme Astraux AL6/AL7 déjà présents dans le projet : couleur grise privilégiée. Les finitions photographiées doivent être confirmées comme représentatives du modèle AL7 Pro livré.</p>
+</div>
+<aside class="panel">
+<div class="eyebrow">Astraux AL7 Pro • Finition Europe</div><h2>Compacte, connectée et bien équipée.</h2>
+<p>Quadricycle lourd L7e à deux places. Retrouvez ci-dessous l'intégralité des caractéristiques connues et des équipements indiqués par le constructeur.</p>
+<div class="dims"><div class="metric"><strong>90 km/h</strong><small>Vitesse maxi</small></div><div class="metric"><strong>150 km</strong><small>Autonomie annoncée</small></div><div class="metric"><strong>10 kWh</strong><small>Batterie LFP</small></div></div>
+<a class="info-btn al7-anchor" href="#al7-technique" onclick="document.getElementById('al7-fiche').scrollIntoView({behavior:'smooth'});return false;">Voir toute la fiche technique ↓</a>
+<a class="info-btn al7-anchor al7-anchor-secondary" href="#al7-equipements" onclick="document.getElementById('al7-equipements').scrollIntoView({behavior:'smooth'});return false;">Voir toutes les options et équipements ↓</a>
+<div class="detail-extra"><div class="tagline">Prix Martinique : sur demande</div><p>Le tarif commercial local et le contenu exact du véhicule importé seront confirmés avant commande.</p><button class="info-btn" onclick="showHome();location.hash='contact'" type="button">Demander des informations</button></div>
+</aside>
+</div>
+<section aria-label="Fiche technique complète Astraux AL7 Pro" class="argument-section" id="al7-fiche">
+<div class="eyebrow">Données techniques • ASTRAUX AL7 Pro</div><h2>Fiche technique complète</h2>
+<p class="section-intro">Toutes les caractéristiques publiées pour la finition AL7 Pro Europe, complétées par les dimensions et les informations de châssis disponibles. L'astérisque (*) signale des détails provenant de fiches revendeurs ou de documentation de gamme, à confirmer sur le véhicule exact.</p>
+<div class="spec-grid"><article class="spec-card"><h3>Identification</h3><dl class="spec-list"><div><dt>Marque et modèle</dt><dd>ASTRAUX AL7 Pro (version Europe)</dd></div><div><dt>Catégorie</dt><dd>L7e — quadricycle lourd électrique</dd></div><div><dt>Places assises</dt><dd>2</dd></div><div><dt>Portes</dt><dd>2</dd></div><div><dt>Énergie</dt><dd>100 % électrique</dd></div><div><dt>Couleur présentée</dt><dd>Gris anthracite</dd></div></dl></article><article class="spec-card"><h3>Motorisation et performances</h3><dl class="spec-list"><div><dt>Puissance nominale</dt><dd>10 kW</dd></div><div><dt>Puissance maximale</dt><dd>20 kW (pic)</dd></div><div><dt>Vitesse maximale</dt><dd>90 km/h</dd></div><div><dt>Autonomie annoncée</dt><dd>Jusqu’à 150 km</dd></div><div><dt>Transmission</dt><dd>Propulsion (roues arrière) *</dd></div><div><dt>Type de moteur</dt><dd>Synchrone à aimants permanents (PMSM) *</dd></div><div><dt>Couple maximal</dt><dd>85 Nm *</dd></div></dl></article><article class="spec-card"><h3>Batterie et recharge</h3><dl class="spec-list"><div><dt>Technologie</dt><dd>Lithium-fer-phosphate (LFP / LiFePO₄)</dd></div><div><dt>Capacité de batterie</dt><dd>10 kWh</dd></div><div><dt>Temps de recharge annoncé</dt><dd>Environ 4 heures en courant alternatif (CA)</dd></div><div><dt>Tension et capacité annoncées</dt><dd>72 V / 139 Ah *</dd></div><div><dt>Recharge sur secteur</dt><dd>CA ; prise et câble exacts à confirmer sur le lot importé</dd></div><div><dt>Récupération d’énergie</dt><dd>Disponible sur la gamme ; réglages exacts à confirmer *</dd></div></dl></article><article class="spec-card"><h3>Dimensions et châssis</h3><dl class="spec-list"><div><dt>Longueur</dt><dd>2 317 mm</dd></div><div><dt>Largeur</dt><dd>1 295 mm</dd></div><div><dt>Hauteur</dt><dd>1 720 mm</dd></div><div><dt>Empattement</dt><dd>1 585 mm</dd></div><div><dt>Suspension avant</dt><dd>Indépendante type MacPherson *</dd></div><div><dt>Suspension arrière</dt><dd>Bras tirés *</dd></div><div><dt>Freins avant / arrière</dt><dd>Disques / tambours *</dd></div><div><dt>Pneumatiques</dt><dd>145/70 R12 (information revendeur) *</dd></div><div><dt>Masse à vide et PTAC</dt><dd>À confirmer sur le certificat de conformité du véhicule</dd></div></dl></article></div>
+<div class="charge-box"><h3>Recharge complète de l’Astraux AL7 Pro : environ 1,60 €*</h3><div class="charge-metrics"><div><strong>≈ 1,60 €</strong><span>10 kWh × 0,1589 €/kWh = 1,589 €, arrondi, hors pertes</span></div><div><strong>≈ 1,75 à 1,83 €</strong><span>Estimation avec 10 à 15 % d'énergie supplémentaire prélevée</span></div><div><strong>≈ 1,06 € / 100 km</strong><span>Coût théorique hors pertes avec autonomie annoncée de 150 km</span></div></div><p class="note">* Coût arrondi à 1,60 € pour l’affichage (calcul exact : 1,589 €). Tarif heures creuses de 0,1589 €/kWh communiqué, non vérifié ici comme tarif EDF en vigueur. Hors pertes et abonnement ; le montant à la prise peut être plus élevé.</p></div>
+</section>
+<section aria-label="Tous les équipements et options Astraux AL7 Pro" class="argument-section" id="al7-equipements">
+<div class="eyebrow">Dotation Europe • AL7 Pro</div><h2>Toutes les options et tous les équipements</h2><p class="section-intro">Voici l'ensemble des équipements que le comparatif européen d'ASTRAUX indique de série sur l'AL7 Pro. Les options payantes et les accessoires locaux ne sont pas détaillés dans ce tableau public.</p>
+<div class="equip-grid"><article class="equip-card"><h3>Sécurité et conduite</h3><ul><li>ABS (antiblocage des roues)</li><li>Airbag conducteur</li><li>Direction assistée électrique (EPS)</li><li>Démarrage sans clé</li><li>Phares LED et feux de jour LED (DRL)</li></ul></article><article class="equip-card"><h3>Accès et stationnement</h3><ul><li>Accès sans clé</li><li>Radars de stationnement avant et arrière</li><li>Rétroviseurs extérieurs chauffants</li><li>Clé Bluetooth via application mobile</li><li>Télécommande et commandes à distance</li></ul></article><article class="equip-card"><h3>Confort et habitacle</h3><ul><li>Climatisation chaud et froid</li><li>Toit panoramique</li><li>Sièges premium en similicuir</li></ul></article><article class="equip-card"><h3>Multimédia et connectivité</h3><ul><li>Écran central couleur</li><li>Réplication de l’écran du smartphone</li><li>Commande / assistant vocal</li><li>Appels téléphoniques Bluetooth</li><li>Recharge du téléphone sans fil par induction</li><li>Application mobile connectée</li></ul></article></div>
+<div class="availability-note"><h3>À confirmer avant la vente en Martinique</h3><p>Caméra 360°, compatibilité native Apple CarPlay ou Android Auto, présence d'autres accessoires, homologation exacte, PTAC et masse à vide : ces points ne sont pas explicitement confirmés pour l'AL7 Pro dans la fiche Europe consultée. Les équipements ci-dessus sont ceux annoncés pour la finition Europe et peuvent varier selon le lot importé.</p></div>
+<p class="note">Source principale : <a href="https://astraux.com/en-fr/products/ev-europe" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Site officiel ASTRAUX — AL7 Pro, fiche et comparatif Europe</a>. Informations de châssis complémentaires : fiches européennes de distribution, à vérifier sur le COC.</p>
+</section>
+</div>
+</main><main aria-label="Fiche Linktour Alumi Pro L6e" class="detail" id="alumiProDetail">
+<div class="wrap"><button class="back" type="button" onclick="showHome();location.hash='vehicules'">← Retour aux véhicules</button>
+<div class="detail-header"><div class="eyebrow">MY EV CAR • LINKTOUR • Catégorie L6e • 2 places</div><h1>Linktour <span style="color:#42816d">Alumi Pro</span></h1><p>100 % électrique • 45 km/h • 120 km WMTC • 7,2 kWh LFP • 16 photos extérieures et intérieures</p></div>
+<div class="detail-layout"><div class="gallery"><div class="stage"><img id="proStageImg" src="https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_4__2_1_1.png" alt="Linktour Alumi Pro — vue extérieure blanche" referrerpolicy="no-referrer"><button aria-label="Photo précédente" class="photo-nav prev" type="button" onclick="proShift(-1)">‹</button><button aria-label="Photo suivante" class="photo-nav next" type="button" onclick="proShift(1)">›</button><div class="photo-count" id="proCounter">1 / 16</div></div>
+<div class="thumbs" id="proThumbs"><button class="thumb selected" data-pro-index="0" type="button" aria-label="Photo 1 : Vue extérieure blanc — trois quarts avant"><img loading="lazy" src="https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_4__2_1_1.png" alt="Vue extérieure blanc — trois quarts avant" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="1" type="button" aria-label="Photo 2 : Vue de profil — Alumi Moon White"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/08/Alumi_moon-white2.png" alt="Vue de profil — Alumi Moon White" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="2" type="button" aria-label="Photo 3 : Vue arrière dans les rues de Rome"><img loading="lazy" src="https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_3__2_1_1.png" alt="Vue arrière dans les rues de Rome" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="3" type="button" aria-label="Photo 4 : Vue avant — carrosserie blanche"><img loading="lazy" src="https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_1__2_1_1.png" alt="Vue avant — carrosserie blanche" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="4" type="button" aria-label="Photo 5 : Vue de profil dans la ville"><img loading="lazy" src="https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_6__2_1_1.png" alt="Vue de profil dans la ville" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="5" type="button" aria-label="Photo 6 : Vue en circulation — toit panoramique"><img loading="lazy" src="https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_5__2_1_1.png" alt="Vue en circulation — toit panoramique" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="6" type="button" aria-label="Photo 7 : Alumi noir — vue trois quarts"><img loading="lazy" src="https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/l/i/linktour_lifestyle_1_1.png" alt="Alumi noir — vue trois quarts" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="7" type="button" aria-label="Photo 8 : Alumi Rock Grey — profil"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/08/Alumi_rock-grey2.png" alt="Alumi Rock Grey — profil" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="8" type="button" aria-label="Photo 9 : Alumi Sprout Green — profil"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/08/Alumi_sprout-green2.png" alt="Alumi Sprout Green — profil" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="9" type="button" aria-label="Photo 10 : Alumi Starlit Black — profil"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/08/Alumi_moon-starlit-black2.png" alt="Alumi Starlit Black — profil" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="10" type="button" aria-label="Photo 11 : Poste de conduite — écran tactile 10,25 pouces"><img loading="lazy" src="https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/l/i/linktour_dashboard_1_1.jpg" alt="Poste de conduite — écran tactile 10,25 pouces" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="11" type="button" aria-label="Photo 12 : Volant multifonction et double affichage"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/07/Alumi-dashboard-e1783070601463.jpg" alt="Volant multifonction et double affichage" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="12" type="button" aria-label="Photo 13 : Sièges avant et sellerie tissu"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/07/Alumi-Sport-Seats-.jpg" alt="Sièges avant et sellerie tissu" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="13" type="button" aria-label="Photo 14 : Vue de l’habitacle et console centrale"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/07/Alumi-interieur-e1783070673341.png" alt="Vue de l’habitacle et console centrale" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="14" type="button" aria-label="Photo 15 : Toit vitré panoramique et sièges"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/07/Alumi-Panoramic-sunroof.jpg" alt="Toit vitré panoramique et sièges" referrerpolicy="no-referrer"></button><button class="thumb" data-pro-index="15" type="button" aria-label="Photo 16 : Coffre arrière — deux valises"><img loading="lazy" src="https://linktour.be/wp-content/uploads/2026/07/Alumi-Trunk-e1783070394863.jpg" alt="Coffre arrière — deux valises" referrerpolicy="no-referrer"></button></div><p class="muted" id="proCaption" style="font-size:.88rem">Vue extérieure blanc — trois quarts avant</p><p class="note">Photos officielles de la gamme Alumi et d'un distributeur de la finition Pro. Les vues et coloris illustrent la gamme ; certains éléments peuvent varier selon la finition ou le marché. Photos hébergées par leurs éditeurs : affichage soumis à une connexion et à la disponibilité de leurs serveurs.</p></div>
+<aside class="panel"><div class="eyebrow">L6e • Finition Pro 7,2 kWh</div><h2>Une vraie citadine, au format sans permis.</h2><p>Climatisation, toit panoramique, écran tactile 10,25 pouces et caméra de recul : voici la finition Pro de la Linktour Alumi.</p>
+<div class="dims"><div class="metric"><strong>45 km/h</strong><small>Vitesse maxi</small></div><div class="metric"><strong>120 km</strong><small>Autonomie WMTC</small></div><div class="metric"><strong>7,2 kWh</strong><small>Batterie LFP</small></div></div>
+<a class="info-btn al7-anchor" href="#pro-fiche" onclick="document.getElementById('pro-fiche').scrollIntoView({behavior:'smooth'});return false;">Voir la fiche technique ↓</a>
+<a class="info-btn al7-anchor al7-anchor-secondary" href="#pro-equipements" onclick="document.getElementById('pro-equipements').scrollIntoView({behavior:'smooth'});return false;">Voir les équipements ↓</a>
+<div class="detail-extra"><div class="tagline">Prix Martinique : sur demande</div><p>La configuration disponible et les conditions d'importation restent à confirmer.</p><button class="info-btn" type="button" onclick="showHome();location.hash='contact'">Demander des informations</button></div></aside></div>
+<section class="argument-section" id="pro-fiche"><div class="eyebrow">Caractéristiques de la finition Pro • L6e</div><h2>Fiche technique complète</h2><p class="section-intro">Données de la version Pro avec batterie standard 7,2 kWh. Une version de 12,96 kWh et 230 km est proposée séparément sur certains marchés : ne pas confondre les deux capacités.</p>
+<div class="spec-grid"><article class="spec-card"><h3>Identification et homologation</h3><dl class="spec-list"><div><dt>Marque</dt><dd>Linktour</dd></div><div><dt>Modèle</dt><dd>Alumi Pro</dd></div><div><dt>Catégorie</dt><dd>L6e — quadricycle léger</dd></div><div><dt>Énergie</dt><dd>100 % électrique</dd></div><div><dt>Places / portes</dt><dd>2 / 2</dd></div><div><dt>Vitesse maximale</dt><dd>45 km/h</dd></div><div><dt>Permis</dt><dd>AM selon conditions légales (France dès 14 ans)</dd></div><div><dt>Carrosserie</dt><dd>Structure aluminium / batterie CTB</dd></div></dl></article><article class="spec-card"><h3>Moteur et performances</h3><dl class="spec-list"><div><dt>Architecture</dt><dd>Propulsion, moteur arrière</dd></div><div><dt>Type</dt><dd>Synchrone à aimants permanents</dd></div><div><dt>Puissance nominale</dt><dd>6 kW</dd></div><div><dt>Puissance maximale (pic)</dt><dd>12 kW</dd></div><div><dt>Couple maxi</dt><dd>65 Nm</dd></div><div><dt>Mode de conduite</dt><dd>Normal</dd></div><div><dt>Pente annoncée</dt><dd>Jusqu’à 30 %</dd></div><div><dt>Récupération d’énergie</dt><dd>Au freinage, selon configuration</dd></div></dl></article><article class="spec-card"><h3>Batterie et recharge</h3><dl class="spec-list"><div><dt>Batterie de série</dt><dd>7,2 kWh (LFP)</dd></div><div><dt>Autonomie officielle</dt><dd>120 km WMTC</dd></div><div><dt>Recharge</dt><dd>AC 2 kW — environ 4 h (0–100 %)</dd></div><div><dt>Connecteur</dt><dd>Type 2 (à confirmer sur le véhicule importé)</dd></div><div><dt>Chimie</dt><dd>Lithium-fer-phosphate</dd></div><div><dt>Batterie Pro longue autonomie</dt><dd>12,96 kWh / 230 km WMTC, version distincte proposée au Benelux</dd></div><div><dt>Prix Martinique</dt><dd>Sur demande</dd></div></dl></article><article class="spec-card"><h3>Dimensions et châssis</h3><dl class="spec-list"><div><dt>Longueur</dt><dd>2 685 mm</dd></div><div><dt>Largeur</dt><dd>1 500 mm</dd></div><div><dt>Hauteur</dt><dd>1 555 mm</dd></div><div><dt>Empattement</dt><dd>1 800 mm</dd></div><div><dt>Garde au sol annoncée</dt><dd>140 mm</dd></div><div><dt>Voies avant / arrière</dt><dd>1 310 / 1 300 mm</dd></div><div><dt>Maniabilité</dt><dd>Donnée constructeur : 4,5 m, définition du rayon à confirmer</dd></div><div><dt>Pneumatiques</dt><dd>155/70 R13</dd></div><div><dt>Masse maximale autorisée</dt><dd>760 kg (source constructeur, à vérifier sur COC)</dd></div><div><dt>Coffre</dt><dd>Environ 320 litres (presse spécialisée)</dd></div></dl></article></div>
+<div class="charge-box"><h3>Recharge théorique de l’Alumi Pro 7,2 kWh : environ 1,14 €*</h3><div class="charge-metrics"><div><strong>≈ 1,14 €</strong><span>7,2 kWh × 0,1589 €/kWh, hors pertes</span></div><div><strong>≈ 1,26 à 1,32 €</strong><span>Estimation avec 10 à 15 % d’énergie supplémentaire prélevée à la prise</span></div><div><strong>≈ 0,95 € / 100 km</strong><span>Calcul théorique hors pertes avec 120 km WMTC</span></div></div><p class="note">* Estimation au tarif heures creuses communiqué de 0,1589 €/kWh, pas un tarif EDF confirmé comme actuel. Coût réel selon charge, rendement, conditions, abonnement et conduite.</p></div></section>
+<section class="argument-section" id="pro-equipements"><div class="eyebrow">Finition Pro • équipements annoncés</div><h2>Options, confort et sécurité</h2><p class="section-intro">Équipements issus des fiches de la gamme Alumi Pro et des retours d'essais. L'homologation et la dotation du véhicule importé en Martinique devront être contrôlées sur la configuration définitive.</p>
+<div class="equip-grid"><article class="equip-card"><h3>Multimédia et connectivité</h3><ul><li>Écran central tactile couleur 10,25 pouces</li><li>Compteur numérique 5 pouces</li><li>Apple CarPlay et Android Auto</li><li>Bluetooth : appels et musique</li><li>Commandes au volant multifonction</li><li>Haut-parleurs et ports USB</li><li>Prise USB-C 60 W selon documentation de gamme</li><li>Prise 12 V et support de téléphone</li></ul></article><article class="equip-card"><h3>Confort et habitacle</h3><ul><li>Climatisation chaud / froid de série sur la Pro</li><li>Tableau de bord avec finition textile</li><li>Sièges habillés de tissu, réglables</li><li>Toit panoramique vitré</li><li>Vitres électriques</li><li>Volant multifonction gainé</li><li>Portes sans cadre de vitre</li><li>Rangements et porte-gobelet</li><li>Câble de recharge domestique inclus selon gamme Benelux</li></ul></article><article class="equip-card"><h3>Conduite et sécurité</h3><ul><li>Caméra de recul</li><li>Ceintures trois points conducteur et passager</li><li>Alerte de ceinture conducteur</li><li>Feux de jour à LED et feux arrière à LED</li><li>Verrouillage centralisé</li><li>Direction assistée : selon marché / option (non présumée de série sur 7,2 kWh)</li><li>ABS/EBD : non annoncés de série dans le tableau de la finition Pro France</li></ul></article><article class="equip-card"><h3>Personnalisation et variantes</h3><ul><li>Blanc Moon White</li><li>Noir Starlit Black</li><li>Gris Rock Grey</li><li>Vert Sprout Green</li><li>Version Pro 12,96 kWh / 230 km WMTC proposée sur certains marchés</li></ul></article></div><div class="availability-note"><h3>À vérifier avant commercialisation</h3><p>La direction assistée, les systèmes d'assistance au freinage, les accessoires, le type exact de prise de recharge et les équipements de connectivité peuvent dépendre du marché ou de la version. La version standard 7,2 kWh ne doit pas être présentée comme la version 12,96 kWh / 230 km.</p></div>
+<p class="note">Sources : <a href="https://www.linktour-auto.com/en/product/detail" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Linktour — fiche technique constructeur</a> • <a href="https://linktour.be/fr/modeles/alumi/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Linktour Benelux — finitions Pro</a> • <a href="https://www.waaijenberg.com/citycar/linktour/linktour-alumi-pro-l6e/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Waaijenberg — galerie et finition Pro</a>. Visuels propriétaires des sources ; droits de réutilisation commerciale à obtenir avant publication.</p></section>
+
+
+
+
+</div></main>
+<!-- V36 : bouton WhatsApp ; numéro dans whatsapp-config.js -->
+<button id="myEvWhatsAppButton" class="my-ev-wa-button" type="button"
+  aria-label="Contacter MY EV CAR sur WhatsApp" title="Contacter MY EV CAR sur WhatsApp"
+  onclick="ouvrirWhatsAppMyEvCar()">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5Z"/>
+    <path d="M8.5 8.2c.4-.4.6-.2.8 0l1.1 1.7-.9 1.2c.7 1.5 1.8 2.6 3.3 3.2l1.1-1 2.1 1.2c-.4 1.4-1.6 1.7-2.4 1.4-2.5-.8-5.6-4.2-5.5-6.5 0-.6.1-.9.4-1.2Z"/>
+  </svg>
+  <span>WhatsApp</span>
+</button>
+<div class="my-ev-wa-notice" id="myEvWaNotice" role="status" aria-live="polite" hidden></div>
+<script src="https://broad-moon-14ca.phmelloul.workers.dev/whatsapp-config.js"></script>
+<script>function toggleOptions(){const panel=document.getElementById("optionsPanel"),button=document.getElementById("optionsToggle"),chevron=document.getElementById("optionsChevron");const open=panel.hidden;panel.hidden=!open;button.setAttribute("aria-expanded",String(open));chevron.textContent=open?"−":"＋";}const photos=[{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/astra-01-jaune.webp",label:'Jaune — vue trois quarts avant'},{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/astra-02-gris.webp",label:'Gris anthracite — vue trois quarts avant'},{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-3-180km-3-3kw.webp",label:'Astraux jaune — 180 km et recharge 3,3 kW'},{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-4-bluetooth-vocal.jpg",label:'Astraux jaune — Bluetooth et commande vocale'},{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-5-portes-ouvertes.jpg",label:'Astraux jaune — portes ouvertes'},{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-6-14plus.jpg",label:'Astraux jaune — visuel 14+'},{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/l6-photo-7-gris-orange.jpg",label:'Astraux gris et orange — présentation'},{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/astra-08-interieur.webp",label:'Habitacle — sièges et volant'},{src:"https://broad-moon-14ca.phmelloul.workers.dev/images/astra-09-tableau.webp",label:'Habitacle — tableau de bord'}];let active=0;function selectPhoto(i){active=(i+photos.length)%photos.length;const p=photos[active];const el=document.getElementById('stageImg');el.src=p.src;el.alt=p.label;document.getElementById('caption').textContent=p.label;document.getElementById('counter').textContent=(active+1)+' / '+photos.length;document.querySelectorAll('#detail .thumb').forEach((t,j)=>t.classList.toggle('selected',j===active));}function shift(n){selectPhoto(active+n)}document.querySelectorAll('#detail .thumb').forEach(b=>b.addEventListener('click',()=>selectPhoto(Number(b.dataset.index))));function openAstraux(){document.getElementById('articleSecuriteDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('articleJeunesDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('home').classList.add('hidden');document.getElementById('detail').classList.add('active');document.getElementById('linktourDetail').classList.remove('active');document.getElementById('al7Detail').classList.remove('active');document.getElementById('alumiProDetail').classList.remove('active');location.hash='astraux-pro-l6e';window.scrollTo({top:0,behavior:'instant'});}function showHome(){document.getElementById('articleSecuriteDetail').classList.remove('active');document.getElementById('articleJeunesDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('detail').classList.remove('active');document.getElementById('linktourDetail').classList.remove('active');document.getElementById('al7Detail').classList.remove('active');document.getElementById('alumiProDetail').classList.remove('active');document.getElementById('home').classList.remove('hidden');}window.addEventListener('hashchange',()=>{if(location.hash==='#astraux-pro-l6e')openAstraux();else if(location.hash==='#linktour-alumi-elite-plus')openLinktour();else if(location.hash==='#astraux-al7-pro')openAL7();else if(location.hash==='#linktour-alumi-pro')openAlumiPro();else if(location.hash==='#article-premiers-trajets')openJeunesArticle();else if(location.hash==='#article-convaincre-parents')openParentsArticle();else if(location.hash==='#article-securite-linktour')openSecuriteArticle();else showHome()});if(location.hash==='#astraux-pro-l6e')openAstraux();else if(location.hash==='#linktour-alumi-elite-plus')openLinktour();else if(location.hash==='#astraux-al7-pro')openAL7();else if(location.hash==='#linktour-alumi-pro')openAlumiPro();else if(location.hash==='#article-premiers-trajets')openJeunesArticle();else if(location.hash==='#article-convaincre-parents')openParentsArticle();else if(location.hash==='#article-securite-linktour')openSecuriteArticle();document.addEventListener('keydown',e=>{if(document.getElementById('alumiProDetail').classList.contains('active')){if(e.key==='ArrowRight')proShift(1);if(e.key==='ArrowLeft')proShift(-1);if(e.key==='Escape'){showHome();location.hash='vehicules'}return;}if(document.getElementById('al7Detail').classList.contains('active')){if(e.key==='ArrowRight')al7Shift(1);if(e.key==='ArrowLeft')al7Shift(-1);if(e.key==='Escape'){showHome();location.hash='vehicules'}return;}if(document.getElementById('linktourDetail').classList.contains('active')){if(e.key==='ArrowRight')linkShift(1);if(e.key==='ArrowLeft')linkShift(-1);if(e.key==='Escape'){showHome();location.hash='vehicules'}return;}if(!document.getElementById('detail').classList.contains('active'))return;if(e.key==='ArrowRight')shift(1);if(e.key==='ArrowLeft')shift(-1);if(e.key==='Escape'){showHome();location.hash='vehicules'}});
+const linkPhotos=[{"src":"https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-exterieur-e1783072139226.webp","label":"Extérieur — blanc, vue 3/4 face à la mer"},{"src":"https://linktour.lu/wp-content/uploads/2026/08/Alumi-Elite_moon-white.png","label":"Moon White — blanc lunaire"},{"src":"https://linktour.lu/wp-content/uploads/2026/08/Alumi-elite_sprout-green2.png","label":"Sprout Green — vert menthe"},{"src":"https://linktour.lu/wp-content/uploads/2026/08/Alumi_elite_rock-grey2.png","label":"Rock Grey — gris roche"},{"src":"https://linktour.lu/wp-content/uploads/2026/08/Alumi-elite_moon-starlit-black2.png","label":"Starlit Black — noir étoilé"},{"src":"https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite.png","label":"Vue de profil — Moon White"},{"src":"https://linktour.lu/wp-content/uploads/2026/07/1201.4-e1783072104691.png","label":"Détail arrière — logo Linktour Elite"},{"src":"https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img0MmZ5czdydnNyMDEtQVVUT1ZJVFJPIiwidyI6W3siZm4iOiJxN216NTNiaWZwemstQVVUT1ZJVFJPIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.QlyaoL29gMy7OhzraW_qmqYdgKMZhk8ld4UTm3Zd3wY/image%3Bs%3D5120x0%3Bq%3D80","label":"Vert menthe — photo réelle de trois quarts avant"},{"src":"https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im11NDd5d2E1OGNrZy1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJhIjoiMCIsInAiOiIxMCwtMTAifV19.P2Miz09XUckiiU1GvAtLkXEPS8DIGlbTI-MJmY01m0c/image%3Bs%3D5120x0%3Bq%3D100","label":"Vert menthe — photo réelle de trois quarts arrière"},{"src":"https://linktour.lu/wp-content/uploads/2026/07/Alumi-elite-Multi-Function-Storage.jpg","label":"Habitacle — vue d’ensemble et rangements"},{"src":"https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-Multifunction-Touchscreen-e1783073079654.jpg","label":"Poste de conduite — volant et écran tactile"},{"src":"https://linktour.lu/wp-content/uploads/2026/07/Alumi-elite-A_C-e1783073145949.jpg","label":"Tableau de bord — écran, CarPlay et climatisation"},{"src":"https://linktour.lu/wp-content/uploads/2026/07/Alumi-Elite-Sports-Seats-e1783073223413.jpg","label":"Sellerie — sièges sport bicolores"},{"src":"https://broad-moon-14ca.phmelloul.workers.dev/images/linktour-elite-coffre-nettoye.png","label":"Coffre — deux valises"}];
+let linkActive=0;
+function linkSelect(i){linkActive=(i+linkPhotos.length)%linkPhotos.length;const photo=linkPhotos[linkActive];const stage=document.getElementById('linkStageImg');stage.src=photo.src;stage.alt=photo.label;document.getElementById('linkCaption').textContent=photo.label;document.getElementById('linkCounter').textContent=(linkActive+1)+' / '+linkPhotos.length;document.querySelectorAll('#linkThumbs .thumb').forEach((el,j)=>el.classList.toggle('selected',j===linkActive));}
+function linkShift(delta){linkSelect(linkActive+delta)}
+document.querySelectorAll('#linkThumbs .thumb').forEach(b=>b.addEventListener('click',()=>linkSelect(Number(b.dataset.linkIndex))));
+function toggleLinkOptions(){const panel=document.getElementById('linkOptionsPanel'),button=document.getElementById('linkOptionsToggle'),chevron=document.getElementById('linkOptionsChevron');const open=panel.hidden;panel.hidden=!open;button.setAttribute('aria-expanded',String(open));chevron.textContent=open?'−':'＋';}
+function openLinktour(){document.getElementById('articleSecuriteDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('articleJeunesDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('home').classList.add('hidden');document.getElementById('detail').classList.remove('active');document.getElementById('linktourDetail').classList.add('active');document.getElementById('al7Detail').classList.remove('active');document.getElementById('alumiProDetail').classList.remove('active');if(location.hash!=='#linktour-alumi-elite-plus')location.hash='linktour-alumi-elite-plus';window.scrollTo({top:0,behavior:'instant'});}
+
+
+const al7Photos=[{"src":"https://broad-moon-14ca.phmelloul.workers.dev/images/astra-02-gris.webp","label":"Astraux gris — vue trois quarts avant"},{"src":"https://broad-moon-14ca.phmelloul.workers.dev/images/astra-06-gris-arriere.webp","label":"Astraux gris — vue arrière"},{"src":"https://broad-moon-14ca.phmelloul.workers.dev/images/al7-interieur-officiel-rond-1.png","label":"Intérieur Astraux — écran tactile rond"},{"src":"https://broad-moon-14ca.phmelloul.workers.dev/images/al7-interieur-officiel-rond-2.png","label":"Habitacle Astraux — vue intérieure avec écran rond"},{"src":"https://cdn.dmove.it/images/47878/large_IMG_8788.jpg","label":"Habitacle Astraux — sièges noir et orange"},{"src":"https://cdn.dmove.it/images/47877/large_IMG_8787.jpg","label":"Tableau de bord Astraux — noir et orange"}];
+let al7Active=0;
+function al7Select(i){al7Active=(i+al7Photos.length)%al7Photos.length;const photo=al7Photos[al7Active];document.getElementById('al7StageImg').src=photo.src;document.getElementById('al7StageImg').alt=photo.label;document.getElementById('al7Caption').textContent=photo.label;document.getElementById('al7Counter').textContent=(al7Active+1)+' / '+al7Photos.length;document.querySelectorAll('#al7Thumbs .thumb').forEach((el,j)=>el.classList.toggle('selected',j===al7Active));}
+function al7Shift(delta){al7Select(al7Active+delta);}
+document.querySelectorAll('#al7Thumbs .thumb').forEach(b=>b.addEventListener('click',()=>al7Select(Number(b.dataset.al7Index))));
+function toggleAL7Options(){const panel=document.getElementById('al7OptionsPanel'),button=document.getElementById('al7OptionsToggle'),chevron=document.getElementById('al7OptionsChevron');const open=panel.hidden;panel.hidden=!open;button.setAttribute('aria-expanded',String(open));chevron.textContent=open?'−':'＋';}
+function openAL7(){document.getElementById('articleSecuriteDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('articleJeunesDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('home').classList.add('hidden');document.getElementById('detail').classList.remove('active');document.getElementById('linktourDetail').classList.remove('active');document.getElementById('al7Detail').classList.add('active');document.getElementById('alumiProDetail').classList.remove('active');if(location.hash!=='#astraux-al7-pro')location.hash='astraux-al7-pro';window.scrollTo({top:0,behavior:'instant'});}
+
+const proPhotos=[{"src": "https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_4__2_1_1.png", "label": "Vue extérieure blanc — trois quarts avant", "category": "Extérieur"}, {"src": "https://linktour.be/wp-content/uploads/2026/08/Alumi_moon-white2.png", "label": "Vue de profil — Alumi Moon White", "category": "Extérieur"}, {"src": "https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_3__2_1_1.png", "label": "Vue arrière dans les rues de Rome", "category": "Extérieur"}, {"src": "https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_1__2_1_1.png", "label": "Vue avant — carrosserie blanche", "category": "Extérieur"}, {"src": "https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_6__2_1_1.png", "label": "Vue de profil dans la ville", "category": "Extérieur"}, {"src": "https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/f/a/factory_5__2_1_1.png", "label": "Vue en circulation — toit panoramique", "category": "Extérieur"}, {"src": "https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/l/i/linktour_lifestyle_1_1.png", "label": "Alumi noir — vue trois quarts", "category": "Extérieur"}, {"src": "https://linktour.be/wp-content/uploads/2026/08/Alumi_rock-grey2.png", "label": "Alumi Rock Grey — profil", "category": "Coloris"}, {"src": "https://linktour.be/wp-content/uploads/2026/08/Alumi_sprout-green2.png", "label": "Alumi Sprout Green — profil", "category": "Coloris"}, {"src": "https://linktour.be/wp-content/uploads/2026/08/Alumi_moon-starlit-black2.png", "label": "Alumi Starlit Black — profil", "category": "Coloris"}, {"src": "https://www.waaijenberg.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/l/i/linktour_dashboard_1_1.jpg", "label": "Poste de conduite — écran tactile 10,25 pouces", "category": "Intérieur"}, {"src": "https://linktour.be/wp-content/uploads/2026/07/Alumi-dashboard-e1783070601463.jpg", "label": "Volant multifonction et double affichage", "category": "Intérieur"}, {"src": "https://linktour.be/wp-content/uploads/2026/07/Alumi-Sport-Seats-.jpg", "label": "Sièges avant et sellerie tissu", "category": "Intérieur"}, {"src": "https://linktour.be/wp-content/uploads/2026/07/Alumi-interieur-e1783070673341.png", "label": "Vue de l’habitacle et console centrale", "category": "Intérieur"}, {"src": "https://linktour.be/wp-content/uploads/2026/07/Alumi-Panoramic-sunroof.jpg", "label": "Toit vitré panoramique et sièges", "category": "Intérieur"}, {"src": "https://linktour.be/wp-content/uploads/2026/07/Alumi-Trunk-e1783070394863.jpg", "label": "Coffre arrière — deux valises", "category": "Intérieur"}];
+let proActive=0;
+function proSelect(i){proActive=(i+proPhotos.length)%proPhotos.length;const p=proPhotos[proActive];const stage=document.getElementById('proStageImg');stage.src=p.src;stage.alt=p.label;document.getElementById('proCaption').textContent=p.label;document.getElementById('proCounter').textContent=(proActive+1)+' / '+proPhotos.length;document.querySelectorAll('#proThumbs .thumb').forEach((el,j)=>el.classList.toggle('selected',j===proActive));}
+function proShift(n){proSelect(proActive+n)}
+document.querySelectorAll('#proThumbs .thumb').forEach(b=>b.addEventListener('click',()=>proSelect(Number(b.dataset.proIndex))));
+function openAlumiPro(){document.getElementById('articleSecuriteDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('articleJeunesDetail').classList.remove('active');document.getElementById('articleParentsDetail').classList.remove('active');document.getElementById('home').classList.add('hidden');document.getElementById('detail').classList.remove('active');document.getElementById('linktourDetail').classList.remove('active');document.getElementById('al7Detail').classList.remove('active');document.getElementById('alumiProDetail').classList.add('active');if(location.hash!=='#linktour-alumi-pro')location.hash='linktour-alumi-pro';window.scrollTo({top:0,behavior:'instant'});}
+
+function openJeunesArticle(){document.getElementById('articleSecuriteDetail').classList.remove('active');
+  document.getElementById('articleParentsDetail').classList.remove('active');
+  document.getElementById('home').classList.add('hidden');
+  ['detail','linktourDetail','al7Detail','alumiProDetail'].forEach(id=>document.getElementById(id).classList.remove('active'));
+  document.getElementById('articleJeunesDetail').classList.add('active');
+  if(location.hash!=='#article-premiers-trajets') location.hash='article-premiers-trajets';
+  window.scrollTo({top:0,behavior:'instant'});
+}
+function backToConseils(){
+  showHome();
+  location.hash='conseils';
+  document.getElementById('conseils').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function openParentsArticle(){document.getElementById('articleSecuriteDetail').classList.remove('active');
+  document.getElementById('home').classList.add('hidden');
+  ['detail','linktourDetail','al7Detail','alumiProDetail','articleJeunesDetail'].forEach(id=>document.getElementById(id).classList.remove('active'));
+  document.getElementById('articleParentsDetail').classList.add('active');
+  if(location.hash!=='#article-convaincre-parents') location.hash='article-convaincre-parents';
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+function openSecuriteArticle(){
+  document.getElementById('home').classList.add('hidden');
+  ['detail','linktourDetail','al7Detail','alumiProDetail','articleJeunesDetail','articleParentsDetail'].forEach(id=>document.getElementById(id).classList.remove('active'));
+  document.getElementById('articleSecuriteDetail').classList.add('active');
+  if(location.hash!=='#article-securite-linktour')location.hash='article-securite-linktour';
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+// V36 — Numéro défini dans whatsapp-config.js, modifiable sans toucher à ce fichier.
+function ouvrirWhatsAppMyEvCar(){
+  var brut = String(window.MY_EV_CAR_NUMERO_WHATSAPP || '');
+  var numero = brut.replace(/\D/g,'');
+  if(!/^\d{9,15}$/.test(numero)){
+    var info = document.getElementById('myEvWaNotice');
+    info.textContent = 'Le contact WhatsApp sera disponible prochainement.';
+    info.hidden = false;
+    if(window.myEvWaNoticeTimer) clearTimeout(window.myEvWaNoticeTimer);
+    window.myEvWaNoticeTimer = setTimeout(function(){info.hidden = true;},4200);
+    return;
+  }
+  var message = 'Bonjour, je souhaite des informations sur les voitures électriques MY EV CAR en Martinique.';
+  window.open('https://wa.me/' + numero + '?text=' + encodeURIComponent(message),'_blank','noopener,noreferrer');
+}
+</script></body></html>
